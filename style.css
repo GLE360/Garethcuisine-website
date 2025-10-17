@@ -1,0 +1,509 @@
+/* ==================== BASE STYLES ==================== */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* ==================== HEADER / NAVBAR ==================== */
+.header {
+  background: rgba(45,45,45, 0.95);
+  color: #fff;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background 0.3s ease, padding 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 0;
+}
+
+.logo {
+  font-size: 1.7rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* NAVIGATION */
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #00bfff;
+}
+
+/* HAMBURGER MENU */
+.nav-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 1.8rem;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 200px;
+    background: #2d2d2d;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .navbar ul.open {
+    display: flex;
+  }
+}
+
+/* ==================== HERO SECTION ==================== */
+.hero {
+  background: url('https://images.pexels.com/photos/5836773/pexels-photo-5836773.jpeg') center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 0 1rem;
+  position: relative;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.4);
+}
+
+.hero .content {
+  position: relative;
+  max-width: 700px;
+  z-index: 2;
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  background-color: #1e90ff;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #00bfff;
+  box-shadow: 0 0 10px rgba(30,144,255,0.6);
+}
+
+/* ==================== ABOUT ==================== */
+.section {
+  padding: 3rem 1rem;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about {
+  background-color: #f9f9f9;
+}
+
+.about p {
+  max-width: 700px;
+  margin: 0.5rem auto;
+}
+
+/* ==================== MENU SECTION ==================== */
+.menu-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.menu-item {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+  transform: translateX(80px);
+}
+
+.menu-info {
+  padding: 1rem;
+}
+
+.menu-info h3 {
+  color: #1e90ff;
+}
+
+/* ==================== GALLERY ==================== */
+.gallery-container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  width: 100%;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.gallery-item .caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.7rem;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  font-size: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .caption {
+  opacity: 1;
+}
+
+/* Lightbox overlay */
+.lightbox-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  padding: 1rem;
+}
+
+.lightbox-img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.5);
+  animation: fadeInScale 0.4s ease;
+}
+
+@keyframes fadeInScale {
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
+}
+
+/* ==================== TEAM SECTION ==================== */
+.team-members {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.member img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.member h3 {
+  color: #1e90ff;
+}
+
+/* ==================== CONTACT FORM ==================== */
+form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+input, textarea {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: inherit;
+}
+
+input:focus, textarea:focus {
+  border-color: #1e90ff;
+  box-shadow: 0 0 5px rgba(30,144,255,0.4);
+}
+
+/* ==================== FOOTER ==================== */
+.footer {
+  background: #2d2d2d;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+/* ==================== LOGIN POPUP ==================== */
+.login-nav-btn {
+  background: #1e90ff;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-nav-btn:hover {
+  background: #00bfff;
+  box-shadow: 0 0 10px rgba(30,144,255,0.6);
+}
+
+.login-popup {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 20px;
+  z-index: 2000;
+  background: linear-gradient(145deg, #e6f4ff, #ffffff);
+  box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+  border: 1px solid #cce7ff;
+  border-radius: 15px;
+  padding: 2rem;
+  width: 320px;
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(-10px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+.login-box h2 {
+  color: #1e90ff;
+}
+
+.input-group {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: #333;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.password-field {
+  position: relative;
+}
+
+.eye {
+  position: absolute;
+  right: 10px;
+  top: 37px;
+  cursor: pointer;
+  color: #1e90ff;
+  transition: transform 0.3s ease;
+}
+
+.eye:hover {
+  transform: scale(1.2);
+}
+
+.btn-login {
+  background: linear-gradient(135deg, #1e90ff, #00bfff);
+  color: #fff;
+  border: none;
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: transform 0.2s ease;
+}
+
+.btn-login:hover {
+  transform: rotate(360deg);
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.4rem;
+  color: #333;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.close-btn:hover {
+  color: #1e90ff;
+}
+
+.register-link {
+  font-size: 0.9rem;
+  margin-top: 0.8rem;
+}
+
+.register-link a {
+  color: #1e90ff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+/* ==================== ANIMATIONS ==================== */
+@keyframes fadeInUp {
+  from {opacity: 0; transform: translateY(40px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* ==================== RESPONSIVENESS ==================== */
+@media (max-width: 768px) {
+  .container {flex-direction: column;}
+  .hero {height: 70vh;}
+  .hero h1 {font-size: 2rem;}
+  .menu-items, .gallery-grid, .team-members {grid-template-columns: 1fr;}
+  .login-popup {width: 90%; right: 5%; top: 100%;}
+}
+
+@media (max-width: 480px) {
+  .hero {height: 60vh;}
+  .btn {padding: 0.6rem 1rem; font-size: 0.9rem;}
+}
+
+
+/* ===== FINAL GALLERY FIX (SMALLER + MATCH MENU SIZE) ===== */
+.gallery-container {
+  width: 90%;
+  margin: 2rem auto;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.2rem;
+  padding: 0 1rem;
+}
+
+.gallery-item {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 180px; /* reduced height to match menu */
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .gallery-item img {
+    height: 150px;
+  }
+}
