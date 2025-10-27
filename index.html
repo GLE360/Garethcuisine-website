@@ -8,9 +8,12 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Sidebar Toggle Button (Visible on Mobile) -->
-<div class="sidebar-toggle" id="sidebarToggle">
-  ☰
+  <button class="sidebar-btn" onclick="toggleSidebar()">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+
 </div>
 
 <!-- Sidebar Menu -->
@@ -29,7 +32,7 @@
   <!-- HEADER -->
   <header class="header">
     <div class="container">
-      <h1 class="logo">GARETH CUISINE </h1>
+      <h1 class="logo">GARETH CUISINE 🍽️</h1>
       <nav class="navbar">
 
 
@@ -319,6 +322,16 @@
 
 <!-- Add JS here -->
 <script>
+<script>
+function toggleSidebar() {
+  const sidebar = document.querySelector('.sidebar');
+  const button = document.querySelector('.sidebar-btn');
+  
+  sidebar.classList.toggle('open');
+  button.classList.toggle('active');
+}
+</script>
+
   // === Sticky header on scroll ===
   window.addEventListener("scroll", () => {
     const header = document.querySelector(".header");
@@ -479,4 +492,3 @@
 </script>
 
 </html>
-
