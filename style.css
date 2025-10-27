@@ -49,6 +49,7 @@ img {
   color: #00bfff;
   .logo {
   margin-left: 45px; /* adds breathing space */
+    text-align: center;
 }
 
 }
