@@ -444,70 +444,25 @@ img {
 
 /* ==================== SIDEBAR NAVIGATION ==================== */
 .sidebar-toggle {
-  /* Sidebar Button (Hamburger to X Animation) */
-.sidebar-btn {
+  display: none;
   position: fixed;
-  top: 20px;
-  left: 20px;
-  width: 45px;
-  height: 45px;
-  background: linear-gradient(135deg, #87cefa, #00bfff);
-  border: none;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  top: 12px;
+  left: 12px;
+  font-size: 18px;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(8px);
+  color: #00bfff;
+  border: 1px solid rgba(0, 191, 255, 0.4);
+  padding: 6px 10px;
+  border-radius: 6px;
   cursor: pointer;
-  z-index: 1100;
-  transition: background 0.3s ease, transform 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 191, 255, 0.4);
+  z-index: 1500;
+  box-shadow: 0 4px 10px rgba(0, 191, 255, 0.5);
+  transition: all 0.5s ease;
 }
 
-.sidebar-btn:hover {
-  transform: scale(1.08);
-  box-shadow: 0 0 20px rgba(0, 191, 255, 0.7);
-}
-
-/* Hamburger lines */
-.sidebar-btn span {
-  position: absolute;
-  width: 24px;
-  height: 3px;
-  background: #fff;
-  border-radius: 2px;
-  transition: all 0.4s ease;
-}
-
-/* Position lines */
-.sidebar-btn span:nth-child(1) {
-  transform: translateY(-8px);
-}
-.sidebar-btn span:nth-child(3) {
-  transform: translateY(8px);
-}
-
-/* When active (turns into X) */
-.sidebar-btn.active span:nth-child(1) {
-  transform: rotate(45deg);
-}
-.sidebar-btn.active span:nth-child(2) {
-  opacity: 0;
-}
-.sidebar-btn.active span:nth-child(3) {
-  transform: rotate(-45deg);
-}
-
-/* Pulse effect for extra style */
-@keyframes pulse {
-  0% { transform: scale(1); box-shadow: 0 0 10px rgba(0,191,255,0.3); }
-  50% { transform: scale(1.1); box-shadow: 0 0 20px rgba(0,191,255,0.6); }
-  100% { transform: scale(1); box-shadow: 0 0 10px rgba(0,191,255,0.3); }
-}
-
-.sidebar-btn {
-  animation: pulse 3s infinite ease-in-out;
-}
-
+.sidebar-toggle:hover {
+  transform: scale(1.05);
 }
 
 .sidebar {
