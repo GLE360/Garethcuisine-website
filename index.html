@@ -8,6 +8,24 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Sidebar Toggle Button (Visible on Mobile) -->
+<div class="sidebar-toggle" id="sidebarToggle">
+  ☰
+</div>
+
+<!-- Sidebar Menu -->
+<nav class="sidebar" id="sidebar">
+  <span class="close-sidebar" id="closeSidebar">&times;</span>
+  <ul>
+    <li><a href="#hero">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#team">Team</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
   <!-- HEADER -->
   <header class="header">
     <div class="container">
@@ -409,6 +427,30 @@
 
 </body>
 <script>
+  const sidebar = document.getElementById("sidebar");
+  const sidebarToggle = document.getElementById("sidebarToggle");
+  const closeSidebar = document.getElementById("closeSidebar");
+
+  sidebarToggle.addEventListener("click", () => {
+    sidebar.classList.add("open");
+    document.body.classList.add("sidebar-open");
+  });
+
+  closeSidebar.addEventListener("click", () => {
+    sidebar.classList.remove("open");
+    document.body.classList.remove("sidebar-open");
+  });
+
+  // Close sidebar when clicking outside of it
+  window.addEventListener("click", (e) => {
+    if (e.target.classList.contains("sidebar-open")) {
+      sidebar.classList.remove("open");
+      document.body.classList.remove("sidebar-open");
+    }
+  });
+</script>
+
+<script>
   const foodPrices = {
     "Berry Smoothie": 350,
     "Fruit Salad Delight": 300,
@@ -437,5 +479,3 @@
 </script>
 
 </html>
-
-
