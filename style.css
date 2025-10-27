@@ -462,22 +462,10 @@ img {
 }
 
 .sidebar-toggle:hover {
-   background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.6);
   box-shadow: 0 4px 14px rgba(0, 191, 255, 0.4);
   transform: scale(1.08);
-}
-
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: -250px;
-  width: 240px;
-  height: 100%;
-  background: white;
-  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
-  padding-top: 60px;
-  transition: all 0.4s ease;
-  z-index: 1400;
+};
 }
 
 .sidebar.open {
@@ -559,3 +547,4 @@ body.sidebar-open::after {
   .hero {height: 60vh;}
   .btn {padding: 0.6rem 1rem; font-size: 0.9rem;}
 }
+
