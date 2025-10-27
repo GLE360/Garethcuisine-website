@@ -444,9 +444,12 @@ img {
   position: fixed;
   top: 12px;
   left: 12px;
-  font-size: 18px;
-  background: linear-gradient(135deg, #00bfff, #009acd);
-  color: white;
+  font-size: 18px
+background: rgba(255, 255, 255, 0.4);
+backdrop-filter: blur(8px);
+color: #00bfff;
+border: 1px solid rgba(0, 191, 255, 0.4);
+
   padding: 6px 10px;
   border-radius: 6px;
   cursor: pointer;
@@ -551,4 +554,5 @@ body.sidebar-open::after {
   .hero {height: 60vh;}
   .btn {padding: 0.6rem 1rem; font-size: 0.9rem;}
 }
+
 
