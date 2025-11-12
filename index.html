@@ -78,9 +78,44 @@
   </section>
 
   <!-- MENU -->
-  <section id="menu" class="section menu">
-    <h2>Our Menu</h2>
-    <div class="menu-items">
+  <!-- MENU -->
+<section id="menu" class="section menu">
+  <h2>Our Menu</h2>
+
+  <div class="menu-scroll">
+    <div class="menu-track">
+
+      <!-- 1: Berry Smoothie -->
+      <div class="menu-item">
+        <img src="https://images.pexels.com/photos/7937333/pexels-photo-7937333.jpeg" alt="Berry Smoothie">
+        <div class="menu-info">
+          <h3>Berry Smoothie</h3>
+          <p>A refreshing blend of strawberries, blueberries, and yogurt — rich in flavor and antioxidants.</p>
+          <span>Ksh 350</span>
+        </div>
+      </div>
+
+      <!-- 2: Fruit Salad Delight -->
+      <div class="menu-item">
+        <img src="https://images.pexels.com/photos/30863688/pexels-photo-30863688.jpeg" alt="Fruit Salad Delight">
+        <div class="menu-info">
+          <h3>Fruit Salad Delight</h3>
+          <p>A colorful mix of tropical fruits, drizzled with honey and garnished with mint leaves for a fresh taste.</p>
+          <span>Ksh 300</span>
+        </div>
+      </div>
+
+      <!-- 3: Chips and Burger -->
+      <div class="menu-item">
+        <img src="https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg" alt="Chips and Burger">
+        <div class="menu-info">
+          <h3>Chips and Burger</h3>
+          <p>Freshly mashed avocado on toasted sourdough, topped with sesame seeds and chili flakes.</p>
+          <span>Ksh 450</span>
+        </div>
+      </div>
+
+      <!-- Duplicate for smooth infinite scroll -->
       <div class="menu-item">
         <img src="https://images.pexels.com/photos/7937333/pexels-photo-7937333.jpeg" alt="Berry Smoothie">
         <div class="menu-info">
@@ -91,7 +126,7 @@
       </div>
 
       <div class="menu-item">
-        <img src="https://images.pexels.com/photos/30863688/pexels-photo-30863688.jpeg" alt="Fruit Salad">
+        <img src="https://images.pexels.com/photos/30863688/pexels-photo-30863688.jpeg" alt="Fruit Salad Delight">
         <div class="menu-info">
           <h3>Fruit Salad Delight</h3>
           <p>A colorful mix of tropical fruits, drizzled with honey and garnished with mint leaves for a fresh taste.</p>
@@ -108,24 +143,9 @@
         </div>
       </div>
 
-      <div class="menu-item">
-        <img src="https://images.pexels.com/photos/19671313/pexels-photo-19671313.jpeg" alt="Nyama choma">
-        <div class="menu-info">
-          <h3>Nyama choma</h3>
-          <p>Grilled chicken, kale, quinoa, and roasted veggies served with a tangy lemon dressing.</p>
-          <span>Ksh 750</span>
-        </div>
-      </div>
-      <div class="menu-item">
-        <img src="https://images.pexels.com/photos/323682/pexels-photo-323682.jpeg">
-        <div class="menu-info">
-          <h3>Beef stake</h3>
-          <p> A perfectly grilled lamb dish, beautifully plated with fresh herbs and seasonal vegetables — a true expression of fine dining and culinary artistry.</p>
-          <span>ksh 1200</span>
-        </div>
-      </div>
     </div>
-  </section>
+  </div>
+</section>
 
 <!-- BOOK NOW BUTTON -->
 <div class="book-now-container">
@@ -477,7 +497,21 @@
     }
   });
 </script>
+<script>
+  const menuTrack = document.querySelector('.menu-track');
+  let position = 0;
+
+  function animateMenu() {
+    position -= 0.5; // Speed of motion
+    if (Math.abs(position) >= menuTrack.scrollWidth / 2) {
+      position = 0; // Reset for seamless loop
+    }
+    menuTrack.style.transform = `translateX(${position}px)`;
+    requestAnimationFrame(animateMenu);
+  }
+
+  animateMenu();
+</script>
+
 
 </html>
-
-
