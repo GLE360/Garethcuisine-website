@@ -43,6 +43,8 @@ img {
 }
 
 .logo {
+  position: fixed;
+  justify-content: center;
   font-size: 1.8rem;
   font-weight: bold;
   font-family: 'Playfair Display', serif;
@@ -150,7 +152,7 @@ img {
   position: relative;
   max-width: 700px;
   z-index: 2;
-  animation: fadeInUp 1.2s ease forwards;
+  animation: fadeInUp 3.2s ease forwards;
 }
 
 .hero h1 {
@@ -637,44 +639,84 @@ body.sidebar-open::after {
   overflow: hidden;
   position: relative;
   width: 100%;
+  margin-top: 20px;
 }
 
 .menu-track {
   display: flex;
-  gap: 30px;
-  animation: scrollMenu 40s linear infinite;
+  gap: 40px;
+  animation: scrollMenuRight 40s linear infinite;
+}
+
+/* Reverse direction: left → right */
+@keyframes scrollMenuRight {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 .menu-item {
-  min-width: 300px;
-  flex-shrink: 0;
-  border-radius: 12px;
-  overflow: hidden;
+  flex: 0 0 300px;
   background: #fff;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
 }
 
 .menu-item img {
   width: 100%;
-  height: 220px;
+  height: 200px;
   object-fit: cover;
 }
 
-/* Hover pause + zoom effect */
-.menu-scroll:hover .menu-track {
-  animation-play-state: paused;
+.menu-info {
+  padding: 15px;
 }
+
+.menu-info h3 {
+  margin: 5px 0;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.menu-info p {
+  color: #666;
+  font-size: 0.95em;
+}
+
+.menu-info span {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #e63946;
+}
+
+/* Hover effects */
 .menu-item:hover {
   transform: scale(1.05);
 }
 
-/* Animation Keyframes */
-@keyframes scrollMenu {
-  0% {
-    transform: translateX(0);
+/* Pause on hover */
+.menu-scroll:hover .menu-track {
+  animation-play-state: paused;
+}
+
+/* ====== Mobile responsiveness ====== */
+@media (max-width: 768px) {
+  .menu-track {
+    gap: 20px;
+    animation: scrollMenuRight 50s linear infinite; /* slower for mobile */
   }
-  100% {
-    transform: translateX(-50%);
+
+  .menu-item {
+    flex: 0 0 240px; /* smaller cards */
+  }
+
+  .menu-item img {
+    height: 160px;
   }
 }
