@@ -664,7 +664,7 @@ body.sidebar-open::after {
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
   overflow: hidden;
-  transition: transform 0.3s ease;
+  transition: transform 0.5s ease;
 }
 
 .menu-item img {
@@ -709,7 +709,7 @@ body.sidebar-open::after {
 @media (max-width: 768px) {
   .menu-track {
     gap: 20px;
-    animation: scrollMenuRight 50s linear infinite; /* slower for mobile */
+    animation: scrollMenuRight 20s linear infinite; /* slower for mobile */
   }
 
   .menu-item {
