@@ -1,1155 +1,1035 @@
 
-/* =====================================================
-   ST. PETROC PREMIER SCHOOLS
-   COMPLETE PREMIUM WEBSITE STYLESHEET
-===================================================== */
-
-/* GOOGLE FONTS */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap');
-
-
-/* =====================================================
-   1. GLOBAL SETTINGS
-===================================================== */
-
-:root {
-    --primary: #082b66;
-    --secondary: #1255a4;
-    --accent: #e6b84a;
-    --white: #ffffff;
-    --light: #f3f7fc;
-    --dark: #071b3b;
-    --text: #526174;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 90px;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-    background: #f5f8fc;
-    color: #26344a;
-    line-height: 1.7;
-    overflow-x: hidden;
-}
-
-
-/* =====================================================
-   2. HEADER AND NAVIGATION
-===================================================== */
-
-header {
-    width: 100%;
-    min-height: 85px;
-    background: rgba(255,255,255,0.97);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 7%;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 3px 20px rgba(0,0,0,0.08);
-    border-bottom: 3px solid var(--accent);
-}
-
-.logo h2 {
-    font-family: 'Montserrat', sans-serif;
-    color: var(--primary);
-    font-size: 21px;
-    font-weight: 800;
-}
-
-nav ul {
-    display: flex;
-    align-items: center;
-    gap: 27px;
-    list-style: none;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: var(--dark);
-    font-size: 14px;
-    font-weight: 600;
-    position: relative;
-    transition: 0.3s ease;
-}
-
-nav ul li a::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 3px;
-    background: var(--accent);
-    left: 0;
-    bottom: -8px;
-    transition: 0.3s;
-}
-
-nav ul li a:hover {
-    color: var(--secondary);
-}
-
-nav ul li a:hover::after {
-    width: 100%;
-}
-
-
-/* =====================================================
-   3. MAIN HERO SECTION
-===================================================== */
-
-.hero {
-    min-height: 650px;
-    height: 85vh;
-
-    background:
-        linear-gradient(
-            rgba(4,27,67,0.78),
-            rgba(4,27,67,0.65)
-        ),
-        url('https://images.pexels.com/photos/31220287/pexels-photo-31220287.jpeg');
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 30px;
-}
-
-.overlay {
-    max-width: 850px;
-    color: var(--white);
-    animation: fadeUp 1.2s ease;
-}
-
-.overlay h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: clamp(36px,5vw,65px);
-    font-weight: 800;
-    line-height: 1.2;
-    margin-bottom: 25px;
-}
-
-.overlay p {
-    font-size: 19px;
-    color: #e5edfa;
-    margin-bottom: 35px;
-    font-weight: 300;
-}
-
-
-/* =====================================================
-   4. BUTTONS
-===================================================== */
-
-.btn {
-    display: inline-block;
-    padding: 15px 35px;
-    background: var(--accent);
-    color: var(--dark);
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: 0.4s ease;
-}
-
-.btn:hover {
-    background: var(--white);
-    color: var(--primary);
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
-
-
-/* =====================================================
-   5. QUICK LINKS
-===================================================== */
-
-.quick-links {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 22px;
-    padding: 60px 7%;
-    background: var(--white);
-}
-
-.quick-links .card {
-    background: var(--primary);
-    color: var(--white);
-    text-align: center;
-    padding: 35px 20px;
-    border-radius: 10px;
-    transition: 0.4s ease;
-    cursor: pointer;
-    box-shadow: 0 8px 20px rgba(8,43,102,0.12);
-}
-
-.quick-links .card:hover {
-    background: var(--secondary);
-    transform: translateY(-10px);
-}
-
-.quick-links .card i {
-    font-size: 38px;
-    color: var(--accent);
-    margin-bottom: 15px;
-}
-
-.quick-links .card h3 {
-    font-size: 17px;
-}
-
-
-/* =====================================================
-   6. GENERAL SECTION STYLING
-===================================================== */
-
-section:not(.hero):not(.quick-links) {
-    padding: 85px 8%;
-}
-
-section h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 34px;
-    font-weight: 800;
-    color: var(--primary);
-    text-align: center;
-    margin-bottom: 20px;
-    position: relative;
-}
-
-section h2::after {
-    content: "";
-    display: block;
-    width: 65px;
-    height: 4px;
-    background: var(--accent);
-    margin: 15px auto 30px;
-    border-radius: 5px;
-}
-
-section > p {
-    max-width: 850px;
-    margin: 0 auto 40px;
-    text-align: center;
-    color: var(--text);
-    font-size: 15px;
-}
-
-
-/* =====================================================
-   7. SCHOOL BACKGROUND PHOTO SECTION
-===================================================== */
-
-.school-background {
-    min-height: 500px;
-
-    /* CHANGE YOUR SCHOOL BACKGROUND PHOTO HERE */
-
-    background-image:
-        linear-gradient(
-            rgba(5,30,75,0.65),
-            rgba(5,30,75,0.65)
-        ),
-        url('https://images.pexels.com/photos/35551059/pexels-photo-35551059.jpeg');
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 60px 20px;
-}
-
-.background-content {
-    max-width: 800px;
-    color: var(--white);
-    animation: fadeUp 1.2s ease;
-}
-
-.background-content h2 {
-    color: var(--white);
-    font-size: clamp(30px,5vw,48px);
-    font-weight: 800;
-    margin-bottom: 20px;
-}
-
-.background-content p {
-    color: var(--white);
-    font-size: 17px;
-    margin-bottom: 30px;
-    line-height: 1.8;
-}
-
-
-/* =====================================================
-   8. ABOUT US
-===================================================== */
-
-.about {
-    background: var(--light);
-}
-
-.about-grid {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 25px;
-    margin-top: 40px;
-}
-
-.about-grid .card {
-    background: var(--white);
-    padding: 35px 28px;
-    border-radius: 10px;
-    border-bottom: 4px solid var(--secondary);
-    box-shadow: 0 5px 25px rgba(0,0,0,0.05);
-    transition: 0.4s ease;
-}
-
-.about-grid .card:hover {
-    transform: translateY(-10px);
-    border-bottom-color: var(--accent);
-    box-shadow: 0 15px 30px rgba(8,43,102,0.12);
-}
-
-.about-grid .card h3 {
-    color: var(--primary);
-    font-size: 20px;
-    margin-bottom: 15px;
-}
-
-.about-grid .card p {
-    color: var(--text);
-    font-size: 14px;
-}
-
-
-/* =====================================================
-   9. ADMISSIONS
-===================================================== */
-
-.admissions {
-    background: var(--white);
-}
-
-.admissions .card {
-    border-top: 4px solid var(--accent);
-    border-bottom: none;
-}
-
-
-/* =====================================================
-   10. ACADEMIC PROGRAMMES
-===================================================== */
-
-.programs {
-    background: #eaf1fa;
-}
-
-.program-grid {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 22px;
-    margin-top: 40px;
-}
-
-.program {
-    background: var(--white);
-    padding: 35px 25px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-    transition: 0.4s ease;
-    border-top: 4px solid var(--secondary);
-}
-
-.program:hover {
-    transform: translateY(-10px);
-    background: var(--primary);
-    border-top-color: var(--accent);
-}
-
-.program h3 {
-    color: var(--primary);
-    font-size: 20px;
-    margin-bottom: 15px;
-    transition: 0.3s;
-}
-
-.program p {
-    color: var(--text);
-    font-size: 14px;
-    transition: 0.3s;
-}
-
-.program:hover h3,
-.program:hover p {
-    color: var(--white);
-}
-
-
-/* =====================================================
-   11. RESEARCH AND INNOVATION
-===================================================== */
-
-.research {
-    background: var(--white);
-}
-
-
-/* =====================================================
-   12. LATEST NEWS
-===================================================== */
-
-.news {
-    background: var(--light);
-}
-
-.news-container {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 25px;
-}
-
-.news-card {
-    background: var(--white);
-    padding: 35px 28px;
-    border-radius: 10px;
-    border-left: 5px solid var(--accent);
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-    transition: 0.4s ease;
-}
-
-.news-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.1);
-}
-
-.news-card h3 {
-    color: var(--primary);
-    font-size: 19px;
-    margin-bottom: 15px;
-}
-
-.news-card p {
-    color: var(--text);
-    font-size: 14px;
-}
-
-
-/* =====================================================
-   13. CONTACT SECTION
-===================================================== */
-
-.contact {
-    background: #eaf1fa;
-}
-
-.contact-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-    max-width: 1100px;
-    margin: 40px auto 0;
-}
-
-.contact-info {
-    background: var(--primary);
-    padding: 40px;
-    border-radius: 10px;
-    color: var(--white);
-}
-
-.contact-info h3 {
-    font-size: 24px;
-    margin-bottom: 25px;
-    color: var(--accent);
-}
-
-.contact-info p {
-    font-size: 14px;
-    margin-bottom: 20px;
-    color: #e0e9f7;
-}
-
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 16px;
-    border: 1px solid #d5deea;
-    border-radius: 6px;
-    outline: none;
-    font-family: 'Poppins',sans-serif;
-    font-size: 14px;
-    background: var(--white);
-    transition: 0.3s;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    border-color: var(--secondary);
-    box-shadow: 0 0 0 3px rgba(18,85,164,0.1);
-}
-
-.contact-form textarea {
-    resize: vertical;
-}
-
-.contact-form button {
-    align-self: flex-start;
-}
-
-
-/* =====================================================
-   14. FOOTER
-===================================================== */
-
-footer {
-    background: var(--dark);
-    color: var(--white);
-    text-align: center;
-    padding: 30px 15px;
-}
-
-footer p {
-    font-size: 13px;
-    color: #cbd5e1;
-}
-
-
-/* =====================================================
-   15. ANIMATIONS
-===================================================== */
-
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BlueBite Kitchen - Delicious Kenyan and international meals delivered fresh.">
+    <title>BlueBite Kitchen | Fresh Food, Great Taste</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="header">
+    <div class="container nav-container">
+
+        <a href="#home" class="logo">
+            <i class="fas fa-utensils"></i>
+            BlueBite <span>Kitchen</span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="#home">Home</a>
+            <a href="#menu">Our Menu</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#track-order">Track Order</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <button class="cart-button" id="openCart">
+            <i class="fas fa-shopping-cart"></i>
+            Cart <span id="cartCount">0</span>
+        </button>
+
+    </div>
+</header>
+
+
+<!-- ================= HERO SECTION ================= -->
+<section class="hero" id="home">
+
+    <div class="hero-content container">
+        <div class="hero-text">
+
+            <span class="hero-tag">WELCOME TO BLUEBITE KITCHEN</span>
+
+            <h1>
+                Fresh Food.
+                <span>Great Taste.</span>
+                Delivered To You.
+            </h1>
+
+            <p>
+                Experience the perfect blend of delicious Kenyan meals
+                and international favourites, freshly prepared just for you.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#menu" class="btn btn-primary">Order Now</a>
+                <a href="#how-it-works" class="btn btn-outline">Learn More</a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=1200" alt="Delicious freshly prepared food">
+    </div>
+
+</section>
+
+
+<!-- ================= SERVICES ================= -->
+<section class="services">
+    <div class="container services-grid">
+
+        <div class="service-card">
+            <i class="fas fa-utensils"></i>
+            <h3>Freshly Prepared</h3>
+            <p>Quality meals prepared with fresh ingredients.</p>
+        </div>
+
+        <div class="service-card">
+            <i class="fas fa-truck"></i>
+            <h3>Fast Delivery</h3>
+            <p>Enjoy your favourite meals wherever you are.</p>
+        </div>
+
+        <div class="service-card">
+            <i class="fas fa-heart"></i>
+            <h3>Made With Love</h3>
+            <p>Delicious food and excellent customer service.</p>
+        </div>
+
+        <div class="service-card">
+            <i class="fas fa-wallet"></i>
+            <h3>Affordable Prices</h3>
+            <p>Great food that fits your budget.</p>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ================= MENU SECTION ================= -->
+<section class="menu-section" id="menu">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <span>EXPLORE OUR MENU</span>
+            <h2>Delicious Meals For Everyone</h2>
+            <p>Discover our wide selection of Kenyan and international dishes.</p>
+        </div>
+
+        <div class="menu-controls">
+
+            <div class="menu-categories">
+                <button class="active" data-category="all">All</button>
+                <button data-category="main">Main Meals</button>
+                <button data-category="burgers">Burgers</button>
+                <button data-category="pizza">Pizza</button>
+                <button data-category="drinks">Drinks</button>
+            </div>
+
+            <input
+                type="search"
+                id="menuSearch"
+                placeholder="Search for your favourite food..."
+            >
+
+        </div>
+
+        <div class="menu-grid" id="menuGrid">
+            <p>Loading our delicious menu...</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= HOW IT WORKS ================= -->
+<section class="how-it-works" id="how-it-works">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <span>SIMPLE AND CONVENIENT</span>
+            <h2>How It Works</h2>
+            <p>Getting your favourite meal has never been easier.</p>
+        </div>
+
+        <div class="steps-grid">
+
+            <div class="step-card">
+                <div class="step-number">01</div>
+                <i class="fas fa-search"></i>
+                <h3>Choose Your Meal</h3>
+                <p>Explore our menu and select the meals you love.</p>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">02</div>
+                <i class="fas fa-shopping-cart"></i>
+                <h3>Place Your Order</h3>
+                <p>Add your meals to the cart and complete checkout.</p>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">03</div>
+                <i class="fas fa-motorcycle"></i>
+                <h3>Receive Your Food</h3>
+                <p>Choose delivery or pickup and enjoy your meal.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ORDER TRACKING ================= -->
+<section class="tracking-section" id="track-order">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <span>ORDER UPDATES</span>
+            <h2>Track Your Order</h2>
+            <p>Enter your order number to check your order details.</p>
+        </div>
+
+        <form id="trackingForm" class="tracking-form">
+
+            <input
+                type="text"
+                id="trackingNumber"
+                placeholder="Enter order number e.g. BB123456"
+                required
+            >
+
+            <button type="submit" class="btn btn-primary">
+                Track Order
+            </button>
+
+        </form>
+
+        <div id="trackingResult"></div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+<section class="contact-section" id="contact">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <span>GET IN TOUCH</span>
+            <h2>Contact BlueBite Kitchen</h2>
+            <p>We would love to hear from you.</p>
+        </div>
+
+        <div class="contact-grid">
+
+            <div class="contact-info">
+
+                <div>
+                    <i class="fas fa-phone"></i>
+                    <h3>Call Us</h3>
+                    <p>+254 700 000 000</p>
+                </div>
+
+                <div>
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email Us</h3>
+                    <p>info@bluebitekitchen.com</p>
+                </div>
+
+                <div>
+                    <i class="fas fa-location-dot"></i>
+                    <h3>Visit Us</h3>
+                    <p>Kenya</p>
+                </div>
+
+            </div>
+
+            <form id="contactForm" class="contact-form">
+
+                <input type="text" name="name" placeholder="Your Name" required>
+
+                <input type="email" name="email" placeholder="Your Email" required>
+
+                <input type="text" name="subject" placeholder="Subject">
+
+                <textarea name="message" rows="5" placeholder="Write your message..." required></textarea>
+
+                <button type="submit" class="btn btn-primary">
+                    Send Message
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+
+    <div class="container footer-content">
+
+        <div>
+            <a href="#home" class="logo">
+                <i class="fas fa-utensils"></i>
+                BlueBite <span>Kitchen</span>
+            </a>
+
+            <p>Fresh food, great taste, unforgettable experiences.</p>
+        </div>
+
+        <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#contact">Contact</a>
+            <a href="#track-order">Track Order</a>
+        </div>
+
+        <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        <p>&copy; <span id="currentYear"></span> BlueBite Kitchen. All Rights Reserved.</p>
+    </div>
+
+</footer>
+
+
+<!-- ================= CART DRAWER ================= -->
+<div class="cart-overlay" id="cartDrawer">
+
+    <div class="cart-panel">
+
+        <div class="cart-header">
+            <h2><i class="fas fa-shopping-cart"></i> Your Cart</h2>
+
+            <button id="closeCart" class="close-cart" aria-label="Close cart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <div id="cartItems" class="cart-items">
+            <p>Your cart is currently empty.</p>
+        </div>
+
+        <div class="cart-footer">
+
+            <div class="cart-total">
+                <span>Subtotal:</span>
+                <strong id="cartSubtotal">KES 0</strong>
+            </div>
+
+            <button id="checkoutButton" class="btn btn-primary">
+                Proceed to Checkout
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= CHECKOUT MODAL ================= -->
+<div class="checkout-overlay" id="checkoutModal">
+
+    <div class="checkout-box">
+
+        <div class="checkout-header">
+            <h2>Complete Your Order</h2>
+
+            <button id="closeCheckout" class="close-checkout" aria-label="Close checkout">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <form id="checkoutForm">
+
+            <label for="customerName">Full Name</label>
+            <input type="text" id="customerName" name="customerName" required>
+
+            <label for="customerPhone">Phone Number</label>
+            <input type="tel" id="customerPhone" name="customerPhone" required>
+
+            <label for="fulfilment">Order Type</label>
+
+            <select id="fulfilment" name="fulfilment">
+                <option value="delivery">Home Delivery</option>
+                <option value="pickup">Restaurant Pickup</option>
+            </select>
+
+            <div id="deliveryAddressGroup">
+                <label for="deliveryAddress">Delivery Address</label>
+                <textarea id="deliveryAddress" name="deliveryAddress" rows="3"></textarea>
+            </div>
+
+            <div class="checkout-total">
+                <span>Total Amount:</span>
+                <strong id="checkoutTotal">KES 0</strong>
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+                Place Order
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<!-- ================= TOAST NOTIFICATION ================= -->
+<div id="toast" class="toast"></div>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+     All website functionality is integrated below.
+===================================================== -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    // ================= FOOD DATABASE =================
+
+    const foods = [
+
+        // KENYAN DISHES
+        {id:1,name:"Nyama Choma",category:"main",price:850,description:"Authentic Kenyan roasted meat.",image:"https://images.unsplash.com/photo-1544025162-d76694265947?w=600"},
+        {id:2,name:"Ugali & Sukuma Wiki",category:"main",price:250,description:"Traditional Kenyan ugali served with fresh greens.",image:"https://images.unsplash.com/photo-1547592180-85f173990554?w=600"},
+        {id:3,name:"Beef Stew & Ugali",category:"main",price:500,description:"Tender beef stew served with soft ugali.",image:"https://images.unsplash.com/photo-1547592180-85f173990554?w=600"},
+        {id:4,name:"Githeri",category:"main",price:250,description:"Traditional Kenyan maize and beans.",image:"https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600"},
+        {id:5,name:"Beef Pilau",category:"main",price:450,description:"Kenyan spiced rice with tender beef.",image:"https://images.unsplash.com/photo-1512058564366-18510be2db19?w=600"},
+        {id:6,name:"Mukimo",category:"main",price:350,description:"Mashed potatoes, maize, peas and greens.",image:"https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600"},
+        {id:7,name:"Chapati & Beans",category:"main",price:300,description:"Soft chapati served with delicious beans.",image:"https://images.unsplash.com/photo-1547592180-85f173990554?w=600"},
+        {id:8,name:"Matoke",category:"main",price:350,description:"Delicious East African banana stew.",image:"https://images.unsplash.com/photo-1547592180-85f173990554?w=600"},
+        {id:9,name:"Beef Wet Fry",category:"main",price:650,description:"Kenyan-style beef wet fry with spices.",image:"https://images.unsplash.com/photo-1544025162-d76694265947?w=600"},
+        {id:10,name:"Chicken Pilau",category:"main",price:550,description:"Aromatic spiced rice served with chicken.",image:"https://images.unsplash.com/photo-1512058564366-18510be2db19?w=600"},
+
+        // INTERNATIONAL MEALS
+        {id:11,name:"Grilled Chicken",category:"main",price:750,description:"Juicy grilled chicken with seasoning.",image:"https://images.unsplash.com/photo-1532550907401-a500c9a57435?w=600"},
+        {id:12,name:"Chicken Biryani",category:"main",price:600,description:"Richly spiced rice with chicken.",image:"https://images.unsplash.com/photo-1563379091339-03246963d96c?w=600"},
+        {id:13,name:"Beef Steak",category:"main",price:950,description:"Tender grilled steak.",image:"https://images.unsplash.com/photo-1544025162-d76694265947?w=600"},
+        {id:14,name:"Chicken Alfredo Pasta",category:"main",price:650,description:"Creamy pasta with grilled chicken.",image:"https://images.unsplash.com/photo-1645112411341-6c4fd023714a?w=600"},
+        {id:15,name:"Fish Fillet",category:"main",price:700,description:"Crispy fish fillet served with sides.",image:"https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=600"},
+        {id:16,name:"Beef Lasagna",category:"main",price:750,description:"Layers of pasta, beef and cheese.",image:"https://images.unsplash.com/photo-1574894709920-11b28e7367e3?w=600"},
+
+        // BURGERS
+        {id:17,name:"Classic Beef Burger",category:"burgers",price:650,description:"Juicy beef burger with fresh vegetables.",image:"https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600"},
+        {id:18,name:"Chicken Burger",category:"burgers",price:600,description:"Crispy chicken burger.",image:"https://images.unsplash.com/photo-1606755962773-d324e0a13086?w=600"},
+        {id:19,name:"Cheese Burger",category:"burgers",price:700,description:"Beef burger topped with melted cheese.",image:"https://images.unsplash.com/photo-1550547660-d9450f859349?w=600"},
+
+        // PIZZA
+        {id:20,name:"Pepperoni Pizza",category:"pizza",price:1200,description:"Classic pizza topped with pepperoni.",image:"https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600"},
+        {id:21,name:"Chicken Pizza",category:"pizza",price:1100,description:"Chicken, cheese and fresh toppings.",image:"https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?w=600"},
+        {id:22,name:"Vegetable Pizza",category:"pizza",price:950,description:"Fresh vegetables and melted cheese.",image:"https://images.unsplash.com/photo-1579751626657-72bc17010498?w=600"},
+
+        // BREAKFAST AND SNACKS
+        {id:23,name:"Breakfast Combo",category:"main",price:400,description:"A filling breakfast to start your day.",image:"https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=600"},
+        {id:24,name:"Samosas",category:"main",price:150,description:"Crispy Kenyan-style samosas.",image:"https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600"},
+        {id:25,name:"French Fries",category:"main",price:250,description:"Golden crispy potato fries.",image:"https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=600"},
+        {id:26,name:"Smokie Pasua",category:"main",price:100,description:"Kenyan street-style smokie with kachumbari.",image:"https://images.unsplash.com/photo-1555126634-323283e090fa?w=600"},
+        {id:27,name:"Mandazi",category:"main",price:100,description:"Soft, freshly prepared Kenyan mandazi.",image:"https://images.unsplash.com/photo-1608198093002-ad4e005484df?w=600"},
+
+        // DRINKS
+        {id:28,name:"Mango Juice",category:"drinks",price:200,description:"Fresh mango juice.",image:"https://images.unsplash.com/photo-1546173159-315724a31696?w=600"},
+        {id:29,name:"Passion Juice",category:"drinks",price:200,description:"Refreshing passion fruit juice.",image:"https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=600"},
+        {id:30,name:"Kenyan Tea",category:"drinks",price:100,description:"Hot Kenyan tea with milk.",image:"https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=600"},
+        {id:31,name:"Lemonade",category:"drinks",price:180,description:"Fresh and refreshing lemonade.",image:"https://images.unsplash.com/photo-1513558161293-cdaf765edfd4?w=600"},
+        {id:32,name:"Chocolate Milkshake",category:"drinks",price:350,description:"Creamy chocolate milkshake.",image:"https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=600"}
+
+    ];
+
+
+    // ================= VARIABLES =================
+
+    const menuGrid = document.getElementById("menuGrid");
+    const menuSearch = document.getElementById("menuSearch");
+    const cartDrawer = document.getElementById("cartDrawer");
+    const cartItems = document.getElementById("cartItems");
+    const cartCount = document.getElementById("cartCount");
+    const cartSubtotal = document.getElementById("cartSubtotal");
+    const checkoutModal = document.getElementById("checkoutModal");
+    const checkoutForm = document.getElementById("checkoutForm");
+    const checkoutTotal = document.getElementById("checkoutTotal");
+    const toast = document.getElementById("toast");
+
+    let cart = JSON.parse(localStorage.getItem("bluebiteCart")) || [];
+    let activeCategory = "all";
+
+
+    // ================= CURRENCY =================
+
+    function formatMoney(amount) {
+        return "KES " + Number(amount).toLocaleString("en-KE");
     }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
+    // ================= DISPLAY MENU =================
 
-/* =====================================================
-   16. TABLET RESPONSIVENESS
-===================================================== */
+    function displayMenu() {
 
-@media (max-width: 1000px) {
+        const searchTerm = menuSearch.value.toLowerCase();
 
-    header {
-        flex-direction: column;
-        gap: 15px;
-    }
+        const filteredFoods = foods.filter(food => {
 
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 18px;
-    }
+            const matchesCategory =
+                activeCategory === "all" ||
+                food.category === activeCategory;
 
-    .quick-links {
-        grid-template-columns: repeat(2,1fr);
-    }
+            const matchesSearch =
+                food.name.toLowerCase().includes(searchTerm) ||
+                food.description.toLowerCase().includes(searchTerm);
 
-    .program-grid {
-        grid-template-columns: repeat(2,1fr);
-    }
+            return matchesCategory && matchesSearch;
 
-    .about-grid {
-        grid-template-columns: repeat(2,1fr);
-    }
-}
+        });
 
+        if (filteredFoods.length === 0) {
+            menuGrid.innerHTML = "<p>No meals found. Try another search.</p>";
+            return;
+        }
 
-/* =====================================================
-   17. MOBILE RESPONSIVENESS
-===================================================== */
+        menuGrid.innerHTML = filteredFoods.map(food => `
 
-@media (max-width: 600px) {
+            <div class="menu-card">
 
-    header {
-        padding: 18px 15px;
-    }
+                <div class="menu-card-image">
+                    <img src="${food.image}" alt="${food.name}" loading="lazy"
+                         onerror="this.onerror=null;this.src='https://placehold.co/600x400?text=BlueBite+Kitchen'">
 
-    .logo h2 {
-        font-size: 17px;
-        text-align: center;
-    }
+                    <span class="food-price">${formatMoney(food.price)}</span>
+                </div>
 
-    nav ul {
-        gap: 12px;
-    }
+                <div class="menu-card-content">
 
-    nav ul li a {
-        font-size: 12px;
-    }
+                    <h3>${food.name}</h3>
 
-    .hero {
-        min-height: 500px;
-        height: 70vh;
+                    <p>${food.description}</p>
+
+                    <div class="menu-card-bottom">
+
+                        <span class="menu-price">${formatMoney(food.price)}</span>
+
+                        <button class="add-to-cart" data-id="${food.id}">
+                            <i class="fas fa-plus"></i> Add
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        `).join("");
+
     }
 
-    .overlay h1 {
-        font-size: 35px;
+
+    // ================= CATEGORY FILTER =================
+
+    document.querySelectorAll("[data-category]").forEach(button => {
+
+        button.addEventListener("click", function () {
+
+            document.querySelectorAll("[data-category]").forEach(btn => {
+                btn.classList.remove("active");
+            });
+
+            this.classList.add("active");
+
+            activeCategory = this.dataset.category;
+
+            displayMenu();
+
+        });
+
+    });
+
+
+    // ================= SEARCH =================
+
+    menuSearch.addEventListener("input", displayMenu);
+
+
+    // ================= TOAST =================
+
+    let toastTimer;
+
+    function showToast(message) {
+
+        toast.textContent = message;
+        toast.classList.add("show");
+
+        clearTimeout(toastTimer);
+
+        toastTimer = setTimeout(() => {
+            toast.classList.remove("show");
+        }, 3000);
+
     }
 
-    .overlay p {
-        font-size: 15px;
+
+    // ================= ADD TO CART =================
+
+    menuGrid.addEventListener("click", function (event) {
+
+        const button = event.target.closest(".add-to-cart");
+
+        if (!button) return;
+
+        const foodId = Number(button.dataset.id);
+        const food = foods.find(item => item.id === foodId);
+
+        if (!food) return;
+
+        const existingItem = cart.find(item => item.id === foodId);
+
+        if (existingItem) {
+            existingItem.quantity++;
+        } else {
+            cart.push({
+                ...food,
+                quantity: 1
+            });
+        }
+
+        saveCart();
+
+        showToast(food.name + " added to cart!");
+
+    });
+
+
+    // ================= SAVE CART =================
+
+    function saveCart() {
+
+        localStorage.setItem("bluebiteCart", JSON.stringify(cart));
+
+        updateCart();
+
     }
 
-    section:not(.hero):not(.quick-links) {
-        padding: 60px 6%;
+
+    // ================= UPDATE CART =================
+
+    function updateCart() {
+
+        let total = 0;
+        let count = 0;
+
+        cart.forEach(item => {
+
+            total += item.price * item.quantity;
+            count += item.quantity;
+
+        });
+
+        cartCount.textContent = count;
+        cartSubtotal.textContent = formatMoney(total);
+        checkoutTotal.textContent = formatMoney(total);
+
+        if (cart.length === 0) {
+
+            cartItems.innerHTML = `
+                <p class="empty-cart">
+                    Your cart is currently empty.
+                </p>
+            `;
+
+            return;
+
+        }
+
+        cartItems.innerHTML = cart.map(item => `
+
+            <div class="cart-item">
+
+                <img src="${item.image}" alt="${item.name}"
+                     onerror="this.onerror=null;this.src='https://placehold.co/100x100?text=Food'">
+
+                <div class="cart-item-details">
+
+                    <h4>${item.name}</h4>
+
+                    <p>${formatMoney(item.price)}</p>
+
+                    <div class="quantity-controls">
+
+                        <button class="quantity-btn" data-id="${item.id}" data-action="decrease">-</button>
+
+                        <span>${item.quantity}</span>
+
+                        <button class="quantity-btn" data-id="${item.id}" data-action="increase">+</button>
+
+                    </div>
+
+                </div>
+
+                <button class="remove-item" data-id="${item.id}" aria-label="Remove ${item.name}">
+                    <i class="fas fa-trash"></i>
+                </button>
+
+            </div>
+
+        `).join("");
+
     }
 
-    section h2 {
-        font-size: 27px;
+
+    // ================= CART QUANTITY AND REMOVE =================
+
+    cartItems.addEventListener("click", function (event) {
+
+        const button = event.target.closest("button");
+
+        if (!button) return;
+
+        const id = Number(button.dataset.id);
+
+        const item = cart.find(product => product.id === id);
+
+        if (!item) return;
+
+        if (button.classList.contains("quantity-btn")) {
+
+            if (button.dataset.action === "increase") {
+                item.quantity++;
+            }
+
+            if (button.dataset.action === "decrease") {
+                item.quantity--;
+            }
+
+            if (item.quantity <= 0) {
+                cart = cart.filter(product => product.id !== id);
+            }
+
+        }
+
+        if (button.classList.contains("remove-item")) {
+
+            cart = cart.filter(product => product.id !== id);
+
+            showToast("Item removed from cart.");
+
+        }
+
+        saveCart();
+
+    });
+
+
+    // ================= OPEN AND CLOSE CART =================
+
+    function openCart() {
+        cartDrawer.classList.add("active");
+        document.body.classList.add("modal-open");
     }
 
-    .quick-links {
-        grid-template-columns: repeat(2,1fr);
-        padding: 40px 5%;
-        gap: 12px;
+    function closeCart() {
+        cartDrawer.classList.remove("active");
+        document.body.classList.remove("modal-open");
     }
 
-    .quick-links .card {
-        padding: 25px 10px;
+    document.getElementById("openCart").addEventListener("click", openCart);
+
+    document.getElementById("closeCart").addEventListener("click", closeCart);
+
+    cartDrawer.addEventListener("click", function (event) {
+        if (event.target === cartDrawer) closeCart();
+    });
+
+
+    // ================= CHECKOUT =================
+
+    document.getElementById("checkoutButton").addEventListener("click", function () {
+
+        if (cart.length === 0) {
+            showToast("Your cart is empty!");
+            return;
+        }
+
+        closeCart();
+
+        checkoutModal.classList.add("active");
+
+    });
+
+
+    document.getElementById("closeCheckout").addEventListener("click", function () {
+
+        checkoutModal.classList.remove("active");
+
+    });
+
+
+    checkoutModal.addEventListener("click", function (event) {
+
+        if (event.target === checkoutModal) {
+            checkoutModal.classList.remove("active");
+        }
+
+    });
+
+
+    // ================= DELIVERY OR PICKUP =================
+
+    const fulfilment = document.getElementById("fulfilment");
+    const deliveryAddressGroup = document.getElementById("deliveryAddressGroup");
+    const deliveryAddress = document.getElementById("deliveryAddress");
+
+    function updateFulfilment() {
+
+        const isDelivery = fulfilment.value === "delivery";
+
+        deliveryAddressGroup.style.display = isDelivery ? "block" : "none";
+
+        deliveryAddress.required = isDelivery;
+
     }
 
-    .about-grid,
-    .program-grid,
-    .news-container,
-    .contact-container {
-        grid-template-columns: 1fr;
-    }
-
-    .school-background {
-        min-height: 400px;
-        background-position: center;
-    }
-
-    .background-content h2 {
-        font-size: 29px;
-    }
-
-    .background-content p {
-        font-size: 14px;
-    }
-
-    .contact-info {
-        padding: 30px 22px;
-    }
-
-    .contact-form button {
-        width: 100%;
-    }
-}
-
-
-/* =====================================================
-   18. ACCESSIBILITY
-===================================================== */
-
-@media (prefers-reduced-motion: reduce) {
-
-    *,
-    *::before,
-    *::after {
-        scroll-behavior: auto !important;
-        animation-duration: 0.01ms !important;
-        transition-duration: 0.01ms !important;
-    }
-}
-
-/* STUDENT LIFE SECTION */
-
-.student-life {
-    padding: 90px 8%;
-    background: #f4f8ff;
-}
-
-.student-life-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    margin-top: 45px;
-}
-
-.life-card {
-    background: #ffffff;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 8px 25px rgba(0, 35, 90, 0.10);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.life-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 35px rgba(0, 35, 90, 0.18);
-}
-
-.life-card img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.5s ease;
-}
-
-.life-card:hover img {
-    transform: scale(1.06);
-}
-
-.life-card-content {
-    padding: 25px;
-}
-
-.life-card-content i {
-    font-size: 28px;
-    color: #d5a52b;
-    margin-bottom: 15px;
-}
-
-.life-card-content h3 {
-    color: #073477;
-    margin-bottom: 12px;
-}
-
-.life-card-content p {
-    color: #666;
-    line-height: 1.7;
-}
-
-/* MOBILE RESPONSIVENESS */
-
-@media (max-width: 900px) {
-    .student-life-grid {
-        grid-template-colu
-/* ABOUT IMAGE DESIGN */
-
-.about-image {
-    position: relative;
-    width: 100%;
-    height: 480px;
-    overflow: hidden;
-    border-radius: 18px;
-    box-shadow: 0 15px 35px rgba(0, 30, 80, 0.18);
-}
-
-.about-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.6s ease;
-}
-
-.about-image:hover img {
-    transform: scale(1.07);
-}
-
-.about-image-caption {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 35px 25px 25px;
-    color: white;
-    background: linear-gradient(
-        transparent,
-        rgba(0, 25, 75, 0.9)
-    );
-}
-
-.about-image-caption h3 {
-    font-size: 25px;
-    margin-bottom: 8px;
-}
-
-.about-image-caption p {
-    font-size: 14px;
-    color: #ffffff;
-}
-
-/* MOBILE */
-
-@media (max-width: 768px) {
-    .about-image {
-        height: 320px;
-    }
-}
-
-/* ================= NEWS AND UPDATES ================= */
-
-.news {
-    padding: 90px 8%;
-    background: #f4f8ff;
-}
-
-.news-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    margin-top: 45px;
-}
-
-.news-card {
-    background: #ffffff;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 8px 25px rgba(0, 35, 90, 0.10);
-    transition: transform 0.4s ease,
-                box-shadow 0.4s ease;
-}
-
-.news-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 16px 35px rgba(0, 35, 90, 0.18);
-}
-
-/* NEWS IMAGE */
-
-.news-image {
-    position: relative;
-    height: 250px;
-    overflow: hidden;
-}
-
-.news-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.6s ease;
-}
-
-.news-card:hover .news-image img {
-    transform: scale(1.08);
-}
-
-/* CATEGORY LABEL */
-
-.news-category {
-    position: absolute;
-    bottom: 15px;
-    left: 15px;
-    background: #d6aa37;
-    color: #082d65;
-    padding: 8px 14px;
-    border-radius: 5px;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
-
-/* NEWS CONTENT */
-
-.news-content {
-    padding: 25px;
-}
-
-.news-date {
-    display: flex;
-    align-items: center;
-    gap: 9px;
-    color: #777;
-    font-size: 12px;
-    margin-bottom: 15px;
-}
-
-.news-date i {
-    color: #d6aa37;
-}
-
-.news-content h3 {
-    color: #073477;
-    font-size: 19px;
-    margin-bottom: 13px;
-    line-height: 1.5;
-}
-
-.news-content p {
-    color: #666;
-    font-size: 14px;
-    line-height: 1.8;
-    margin-bottom: 20px;
-}
-
-/* READ MORE */
-
-.read-more {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    color: #073477;
-    font-weight: 700;
-    font-size: 13px;
-    text-decoration: none;
-    transition: color 0.3s ease,
-                gap 0.3s ease;
-}
-
-.read-more:hover {
-    color: #d6aa37;
-    gap: 16px;
-}
-
-/* RESPONSIVE DESIGN */
-
-@media (max-width: 950px) {
-    .news-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 600px) {
-    .news-container {
-        grid-template-columns: 1fr;
-    }
-
-    .news-image {
-        height: 230px;
-    }
-
-    .news {
-        padding: 65px 6%;
-    }
-}
-mns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 600px) {
-    .student-life-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .life-card img {
-        height: 230px;
-    }
-}
-
-/* ABOUT IMAGE DESIGN */
-
-.about-image {
-    position: relative;
-    width: 100%;
-    height: 480px;
-    overflow: hidden;
-    border-radius: 18px;
-    box-shadow: 0 15px 35px rgba(0, 30, 80, 0.18);
-}
-
-.about-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.6s ease;
-}
-
-.about-image:hover img {
-    transform: scale(1.07);
-}
-
-.about-image-caption {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 35px 25px 25px;
-    color: white;
-    background: linear-gradient(
-        transparent,
-        rgba(0, 25, 75, 0.9)
-    );
-}
-
-.about-image-caption h3 {
-    font-size: 25px;
-    margin-bottom: 8px;
-}
-
-.about-image-caption p {
-    font-size: 14px;
-    color: #ffffff;
-}
-
-/* MOBILE */
-
-@media (max-width: 768px) {
-    .about-image {
-        height: 320px;
-    }
-}
-
-/* ================= NEWS AND UPDATES ================= */
-
-.news {
-    padding: 90px 8%;
-    background: #f4f8ff;
-}
-
-.news-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    margin-top: 45px;
-}
-
-.news-card {
-    background: #ffffff;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 8px 25px rgba(0, 35, 90, 0.10);
-    transition: transform 0.4s ease,
-                box-shadow 0.4s ease;
-}
-
-.news-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 16px 35px rgba(0, 35, 90, 0.18);
-}
-
-/* NEWS IMAGE */
-
-.news-image {
-    position: relative;
-    height: 250px;
-    overflow: hidden;
-}
-
-.news-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.6s ease;
-}
-
-.news-card:hover .news-image img {
-    transform: scale(1.08);
-}
-
-/* CATEGORY LABEL */
-
-.news-category {
-    position: absolute;
-    bottom: 15px;
-    left: 15px;
-    background: #d6aa37;
-    color: #082d65;
-    padding: 8px 14px;
-    border-radius: 5px;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
-
-/* NEWS CONTENT */
-
-.news-content {
-    padding: 25px;
-}
-
-.news-date {
-    display: flex;
-    align-items: center;
-    gap: 9px;
-    color: #777;
-    font-size: 12px;
-    margin-bottom: 15px;
-}
-
-.news-date i {
-    color: #d6aa37;
-}
-
-.news-content h3 {
-    color: #073477;
-    font-size: 19px;
-    margin-bottom: 13px;
-    line-height: 1.5;
-}
-
-.news-content p {
-    color: #666;
-    font-size: 14px;
-    line-height: 1.8;
-    margin-bottom: 20px;
-}
-
-/* READ MORE */
-
-.read-more {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    color: #073477;
-    font-weight: 700;
-    font-size: 13px;
-    text-decoration: none;
-    transition: color 0.3s ease,
-                gap 0.3s ease;
-}
-
-.read-more:hover {
-    color: #d6aa37;
-    gap: 16px;
-}
-
-/* RESPONSIVE DESIGN */
-
-@media (max-width: 950px) {
-    .news-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 600px) {
-    .news-container {
-        grid-template-columns: 1fr;
-    }
-
-    .news-image {
-        height: 230px;
-    }
-
-    .news {
-        padding: 65px 6%;
-    }
-}
-
-/* =====================================================
-   END OF STYLESHEET
-===================================================== */
+    fulfilment.addEventListener("change", updateFulfilment);
+
+    updateFulfilment();
+
+
+    // ================= PLACE ORDER =================
+
+    checkoutForm.addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        if (cart.length === 0) {
+            showToast("Your cart is empty!");
+            return;
+        }
+
+        const customerName = document.getElementById("customerName").value.trim();
+        const customerPhone = document.getElementById("customerPhone").value.trim();
+        const orderType = fulfilment.value;
+        const address = deliveryAddress.value.trim();
+
+        if (!customerName || !customerPhone) {
+            showToast("Please complete your details.");
+            return;
+        }
+
+        if (orderType === "delivery" && !address) {
+            showToast("Please enter your delivery address.");
+            return;
+        }
+
+        const total = cart.reduce((sum, item) => {
+            return sum + item.price * item.quantity;
+        }, 0);
+
+        const orderNumber = "BB" + Date.now().toString().slice(-8);
+
+        const order = {
+
+            orderNumber,
+            customerName,
+            customerPhone,
+            orderType,
+            address: orderType === "delivery" ? address : "Restaurant pickup",
+            items: [...cart],
+            total,
+            date: new Date().toLocaleString(),
+            status: "Order received"
+
+        };
+
+        const orders = JSON.parse(localStorage.getItem("bluebiteOrders")) || [];
+
+        orders.push(order);
+
+        localStorage.setItem("bluebiteOrders", JSON.stringify(orders));
+
+        cart = [];
+
+        saveCart();
+
+        checkoutForm.reset();
+
+        updateFulfilment();
+
+        checkoutModal.classList.remove("active");
+
+        showToast("Your order has been placed!");
+
+        alert(
+            "Thank you for ordering from BlueBite Kitchen!\n\n" +
+            "Your order number is: " + orderNumber +
+            "\nTotal: " + formatMoney(total) +
+            "\n\nPlease save your order number to track your order."
+        );
+
+    });
+
+
+    // ================= TRACK ORDER =================
+
+    document.getElementById("trackingForm").addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        const orderNumber = document.getElementById("trackingNumber").value.trim();
+
+        const orders = JSON.parse(localStorage.getItem("bluebiteOrders")) || [];
+
+        const order = orders.find(item =>
+            item.orderNumber.toLowerCase() === orderNumber.toLowerCase()
+        );
+
+        const result = document.getElementById("trackingResult");
+
+        if (!order) {
+
+            result.innerHTML = `
+                <div class="tracking-error">
+                    <i class="fas fa-circle-exclamation"></i>
+                    <p>Order not found. Please check your order number.</p>
+                </div>
+            `;
+
+            return;
+
+        }
+
+        const itemSummary = order.items.map(item =>
+            `${item.name} x ${item.quantity}`
+        ).join(", ");
+
+        result.innerHTML = `
+
+            <div class="tracking-success">
+
+                <h3><i class="fas fa-check-circle"></i> Order Found!</h3>
+
+                <p><strong>Order Number:</strong> ${order.orderNumber}</p>
+
+                <p><strong>Customer:</strong> ${order.customerName}</p>
+
+                <p><strong>Order Type:</strong> ${order.orderType}</p>
+
+                <p><strong>Items:</strong> ${itemSummary}</p>
+
+                <p><strong>Total:</strong> ${formatMoney(order.total)}</p>
+
+                <p><strong>Status:</strong> ${order.status}</p>
+
+                <p><strong>Date:</strong> ${order.date}</p>
+
+            </div>
+
+        `;
+
+    });
+
+
+    // ================= CONTACT FORM =================
+
+    document.getElementById("contactForm").addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        showToast("Thank you! Your message has been received in this demo.");
+
+        this.reset();
+
+    });
+
+
+    // ================= MOBILE NAVIGATION =================
+
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", function () {
+
+        navLinks.classList.toggle("active");
+
+        const icon = menuToggle.querySelector("i");
+
+        icon.classList.toggle("fa-bars");
+        icon.classList.toggle("fa-times");
+
+    });
+
+    navLinks.querySelectorAll("a").forEach(link => {
+
+        link.addEventListener("click", function () {
+
+            navLinks.classList.remove("active");
+
+            const icon = menuToggle.querySelector("i");
+
+            icon.classList.remove("fa-times");
+            icon.classList.add("fa-bars");
+
+        });
+
+    });
+
+
+    // ================= ESCAPE KEY =================
+
+    document.addEventListener("keydown", function (event) {
+
+        if (event.key === "Escape") {
+
+            closeCart();
+
+            checkoutModal.classList.remove("active");
+
+        }
+
+    });
+
+
+    // ================= FOOTER YEAR =================
+
+    document.getElementById("currentYear").textContent = new Date().getFullYear();
+
+
+    // ================= INITIALISE WEBSITE =================
+
+    displayMenu();
+
+    updateCart();
+
+});
+
+</script>
+
+</body>
+</html>
