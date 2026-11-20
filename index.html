@@ -1,303 +1,150 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BlueBite Kitchen - Delicious Kenyan and international meals delivered fresh.">
+    <title>GARETH KIMANZI KITCHEN | Fresh Food, Great Taste</title>
 
-    <title>GARETH GROUP OF SCHOOLS | Excellence in Education</title>
-
-    <meta name="description" content="Welcome to St. Petroc Premier Schools. Discover our learning environment, academic programmes, admissions and student life.">
-
-    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
 
 <!-- ================= HEADER ================= -->
-
 <header class="header">
+    <div class="container nav-container">
 
-    <div class="logo">
-        <a href="#home">
-            <span>GARETH KIMANZI</span>
-            <small>GROUP OF SCHOOLS</small>
+        <a href="#home" class="logo">
+            <i class="fas fa-utensils"></i>
+            BlueBite <span>Kitchen</span>
         </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="#home">Home</a>
+            <a href="#menu">Our Menu</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#track-order">Track Order</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <button class="cart-button" id="openCart">
+            <i class="fas fa-shopping-cart"></i>
+            Cart <span id="cartCount">0</span>
+        </button>
+
     </div>
-
-    <nav class="navbar">
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#admissions">Admissions</a></li>
-            <li><a href="#programmes">Programmes</a></li>
-            <li><a href="#facilities">Facilities</a></li>
-            <li><a href="#student-life">Student Life</a></li>
-            <li><a href="#research">Research</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <a href="#admissions" class="header-btn">Apply Now</a>
-
 </header>
 
 
 <!-- ================= HERO SECTION ================= -->
-
 <section class="hero" id="home">
 
-    <div class="overlay"></div>
+    <div class="hero-content container">
+        <div class="hero-text">
 
-    <div class="hero-content">
+            <span class="hero-tag">WELCOME TO GARETH KIMANZI KITCHEN</span>
 
-        <span class="hero-subtitle">WELCOME TO GARETH KIMANZI GROUP OF SCHOOLS</span>
-
-        <h1>Building Tomorrow's Leaders Today</h1>
-
-        <p>
-            Inspiring excellence, nurturing talent and empowering
-            learners with the knowledge, values and skills needed
-            to shape a better future.
-        </p>
-
-        <div class="hero-buttons">
-            <a href="#about" class="btn">Discover Our School</a>
-            <a href="#admissions" class="btn secondary-btn">Join Our Community</a>
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= QUICK LINKS ================= -->
-
-<section class="quick-links">
-
-    <div class="card">
-        <i class="fas fa-user-graduate"></i>
-        <h3>Admissions</h3>
-        <p>Discover how to become part of our learning community.</p>
-        <a href="#admissions">Learn More →</a>
-    </div>
-
-    <div class="card">
-        <i class="fas fa-book-open"></i>
-        <h3>Programmes</h3>
-        <p>Explore our educational programmes and learning opportunities.</p>
-        <a href="#programmes">Explore Programmes →</a>
-    </div>
-
-    <div class="card">
-        <i class="fas fa-school"></i>
-        <h3>Our Facilities</h3>
-        <p>Discover the environment that supports learning and development.</p>
-        <a href="#facilities">View Facilities →</a>
-    </div>
-
-    <div class="card">
-        <i class="fas fa-envelope"></i>
-        <h3>Contact Us</h3>
-        <p>Get in touch with our school administration.</p>
-        <a href="#contact">Contact Us →</a>
-    </div>
-
-</section>
-
-
-<!-- ================= SCHOOL BACKGROUND ================= -->
-
-<section id="school-background" class="school-background">
-
-    <div class="background-content">
-
-        <span class="section-tag">A PLACE TO GROW</span>
-
-        <h2>Welcome to GARETH GROUP OF SCHOOLS</h2>
-
-        <p>
-            A centre of learning dedicated to nurturing talent,
-            inspiring innovation and building future leaders.
-            We believe every learner has the potential to achieve greatness.
-        </p>
-
-        <a href="#about" class="btn">Discover Our School</a>
-
-    </div>
-
-</section>
-
-
-<!-- ================= ABOUT US ================= -->
-
-<section class="about" id="about">
-
-    <div class="section-heading">
-
-        <span class="section-tag">WHO WE ARE</span>
-
-        <h2>About St. Gareth group of Schools</h2>
-
-        <p>
-            Discover our commitment to education, personal growth
-            and the development of responsible future leaders.
-        </p>
-
-    </div>
-
-    <div class="about-grid">
-
-        
-<div class="about-image">
-    <img
-        src="https://images.pexels.com/photos/7292332/pexels-photo-7292332.jpeg"
-        alt="St. Petroc Premier Schools students and school environment"
-    >
-
-    <div class="about-image-caption">
-        <h3>Excellence in Education</h3>
-        <p>Inspiring learners. Building future leaders.</p>
-    </div>
-</div>
-
-
-        <div class="about-content">
-
-            <h3>Education That Inspires Excellence</h3>
+            <h1>
+                Fresh Food.
+                <span>Great Taste.</span>
+                Delivered To You.
+            </h1>
 
             <p>
-                St. Petroc Premier Schools is committed to providing
-                a supportive learning environment where learners
-                are encouraged to discover their abilities,
-                develop confidence and pursue excellence.
+                Experience the perfect blend of delicious Kenyan meals
+                and international favourites, freshly prepared just for you.
             </p>
 
-            <p>
-                We believe education should develop the whole person.
-                Our approach encourages academic growth, good character,
-                creativity, leadership and practical skills.
-            </p>
-
-            <div class="about-values">
-
-                <div>
-                    <i class="fas fa-bullseye"></i>
-                    <h4>Our Mission</h4>
-                    <p>
-                        To provide quality education that nurtures
-                        knowledge, character, creativity and leadership.
-                    </p>
-                </div>
-
-                <div>
-                    <i class="fas fa-eye"></i>
-                    <h4>Our Vision</h4>
-                    <p>
-                        To be a distinguished centre of excellence
-                        producing responsible and innovative leaders.
-                    </p>
-                </div>
-
-                <div>
-                    <i class="fas fa-heart"></i>
-                    <h4>Our Core Values</h4>
-                    <p>
-                        Integrity, respect, discipline, responsibility,
-                        excellence and teamwork.
-                    </p>
-                </div>
-
+            <div class="hero-buttons">
+                <a href="#menu" class="btn btn-primary">Order Now</a>
+                <a href="#how-it-works" class="btn btn-outline">Learn More</a>
             </div>
 
         </div>
+    </div>
 
+    <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=1200" alt="Delicious freshly prepared food">
     </div>
 
 </section>
 
 
-<!-- ================= WHY CHOOSE US ================= -->
+<!-- ================= SERVICES ================= -->
+<section class="services">
+    <div class="container services-grid">
 
-<section class="why-choose-us" id="why-us">
-
-    <div class="section-heading">
-
-        <span class="section-tag">WHY Gareth Schools?</span>
-
-        <h2>Why Choose St. Petroc Premier Schools?</h2>
-
-        <p>
-            We are committed to nurturing confident, responsible
-            and well-rounded learners.
-        </p>
-
-    </div>
-
-    <div class="features-container">
-
-        <div class="feature-card">
-            <i class="fas fa-graduation-cap"></i>
-            <h3>Academic Excellence</h3>
-            <p>
-                We promote a strong learning culture that encourages
-                curiosity, critical thinking and academic growth.
-            </p>
+        <div class="service-card">
+            <i class="fas fa-utensils"></i>
+            <h3>Freshly Prepared</h3>
+            <p>Quality meals prepared with fresh ingredients.</p>
         </div>
 
-        <div class="feature-card">
-            <i class="fas fa-user-shield"></i>
-            <h3>Discipline and Values</h3>
-            <p>
-                We encourage integrity, respect, responsibility
-                and good character in every learner.
-            </p>
+        <div class="service-card">
+            <i class="fas fa-truck"></i>
+            <h3>Fast Delivery</h3>
+            <p>Enjoy your favourite meals wherever you are.</p>
         </div>
 
-        <div class="feature-card">
-            <i class="fas fa-lightbulb"></i>
-            <h3>Innovation and Creativity</h3>
-            <p>
-                We inspire learners to explore new ideas,
-                solve problems and develop creative skills.
-            </p>
-        </div>
-
-        <div class="feature-card">
-            <i class="fas fa-users"></i>
-            <h3>Personal Development</h3>
-            <p>
-                We support learners in developing confidence,
-                communication skills, teamwork and leadership.
-            </p>
-        </div>
-
-        <div class="feature-card">
+        <div class="service-card">
             <i class="fas fa-heart"></i>
-            <h3>Student Support</h3>
-            <p>
-                We aim to provide a supportive learning environment
-                where every learner is encouraged to grow.
-            </p>
+            <h3>Made With Love</h3>
+            <p>Delicious food and excellent customer service.</p>
         </div>
 
-        <div class="feature-card">
-            <i class="fas fa-globe"></i>
-            <h3>Global Perspective</h3>
-            <p>
-                We prepare learners with knowledge and skills
-                to participate in an increasingly connected world.
-            </p>
+        <div class="service-card">
+            <i class="fas fa-wallet"></i>
+            <h3>Affordable Prices</h3>
+            <p>Great food that fits your budget.</p>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ================= MENU SECTION ================= -->
+<section class="menu-section" id="menu">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <span>EXPLORE OUR MENU</span>
+            <h2>Delicious Meals For Everyone</h2>
+            <p>Discover our wide selection of Kenyan and international dishes.</p>
+        </div>
+
+        <div class="menu-controls">
+
+            <div class="menu-categories">
+                <button class="active" data-category="all">All</button>
+                <button data-category="main">Main Meals</button>
+                <button data-category="burgers">Burgers</button>
+                <button data-category="pizza">Pizza</button>
+                <button data-category="drinks">Drinks</button>
+            </div>
+
+            <input
+                type="search"
+                id="menuSearch"
+                placeholder="Search for your favourite food..."
+            >
+
+        </div>
+
+        <div class="menu-grid" id="menuGrid">
+            <p>Loading our delicious menu...</p>
         </div>
 
     </div>
@@ -305,127 +152,39 @@
 </section>
 
 
-<!-- ================= LEARNING APPROACH ================= -->
+<!-- ================= HOW IT WORKS ================= -->
+<section class="how-it-works" id="how-it-works">
 
-<section class="learning-approach" id="learning">
+    <div class="container">
 
-    <div class="section-heading">
-
-        <span class="section-tag">OUR APPROACH</span>
-
-        <h2>Learning Beyond the Classroom</h2>
-
-        <p>
-            Education is more than books. We encourage learners
-            to discover their abilities and apply knowledge in everyday life.
-        </p>
-
-    </div>
-
-    <div class="approach-grid">
-
-        <div class="approach-item">
-            <div class="approach-number">01</div>
-            <h3>Interactive Learning</h3>
-            <p>
-                Encouraging participation, discussion, teamwork
-                and practical learning experiences.
-            </p>
+        <div class="section-heading">
+            <span>SIMPLE AND CONVENIENT</span>
+            <h2>How It Works</h2>
+            <p>Getting your favourite meal has never been easier.</p>
         </div>
 
-        <div class="approach-item">
-            <div class="approach-number">02</div>
-            <h3>Digital Education</h3>
-            <p>
-                Promoting responsible use of technology
-                and digital skills in the learning process.
-            </p>
-        </div>
+        <div class="steps-grid">
 
-        <div class="approach-item">
-            <div class="approach-number">03</div>
-            <h3>Talent Development</h3>
-            <p>
-                Identifying and nurturing individual strengths
-                through creative and extracurricular activities.
-            </p>
-        </div>
+            <div class="step-card">
+                <div class="step-number">01</div>
+                <i class="fas fa-search"></i>
+                <h3>Choose Your Meal</h3>
+                <p>Explore our menu and select the meals you love.</p>
+            </div>
 
-        <div class="approach-item">
-            <div class="approach-number">04</div>
-            <h3>Continuous Assessment</h3>
-            <p>
-                Supporting learner progress through regular feedback,
-                assessment and academic guidance.
-            </p>
-        </div>
+            <div class="step-card">
+                <div class="step-number">02</div>
+                <i class="fas fa-shopping-cart"></i>
+                <h3>Place Your Order</h3>
+                <p>Add your meals to the cart and complete checkout.</p>
+            </div>
 
-    </div>
-
-</section>
-
-
-<!-- ================= ADMISSIONS ================= -->
-
-<section class="admissions" id="admissions">
-
-    <div class="section-heading">
-
-        <span class="section-tag">JOIN OUR COMMUNITY</span>
-
-        <h2>Admissions at St. Petroc</h2>
-
-        <p>
-            Take the first step towards an inspiring educational journey.
-            We welcome enquiries from parents and guardians.
-        </p>
-
-    </div>
-
-    <div class="admissions-container">
-
-        <div class="admission-card">
-
-            <i class="fas fa-file-alt"></i>
-
-            <h3>Application Process</h3>
-
-            <p>
-                Contact our admissions office to receive guidance
-                on the application process and available opportunities.
-            </p>
-
-            <a href="#contact" class="btn">Make an Enquiry</a>
-
-        </div>
-
-        <div class="admission-card">
-
-            <i class="fas fa-clipboard-check"></i>
-
-            <h3>Admission Requirements</h3>
-
-            <p>
-                Our administration team can guide parents and guardians
-                on the documents and requirements needed for admission.
-            </p>
-
-            <a href="#contact" class="btn">Get Information</a>
-
-        </div>
-
-        <div class="admission-card">
-
-            <i class="fas fa-comments"></i>
-
-            <h3>Parent Guidance</h3>
-
-            <p>
-                We encourage parents to communicate with our school
-                administration for assistance throughout the process.
-            </p>
-
-            <a href="#contact" class="btn">Contact Admissions</a>
+            <div class="step-card">
+                <div class="step-number">03</div>
+                <i class="fas fa-motorcycle"></i>
+                <h3>Receive Your Food</h3>
+                <p>Choose delivery or pickup and enjoy your meal.</p>
+            </div>
 
         </div>
 
@@ -434,618 +193,33 @@
 </section>
 
 
-<!-- ================= PROGRAMMES ================= -->
+<!-- ================= ORDER TRACKING ================= -->
+<section class="tracking-section" id="track-order">
 
-<section class="programmes" id="programmes">
+    <div class="container">
 
-    <div class="section-heading">
-
-        <span class="section-tag">ACADEMIC PROGRAMMES</span>
-
-        <h2>Our Educational Programmes</h2>
-
-        <p>
-            We aim to provide meaningful learning experiences
-            that support the intellectual and personal development
-            of every learner.
-        </p>
-
-    </div>
-
-    <div class="program-grid">
-
-        <div class="program">
-            <i class="fas fa-child"></i>
-            <h3>Early Years Education</h3>
-            <p>
-                Supporting early childhood development through
-                foundational learning, exploration and play.
-            </p>
+        <div class="section-heading">
+            <span>ORDER UPDATES</span>
+            <h2>Track Your Order</h2>
+            <p>Enter your order number to check your order details.</p>
         </div>
 
-        <div class="program">
-            <i class="fas fa-book-reader"></i>
-            <h3>Primary Education</h3>
-            <p>
-                Building strong foundations in literacy, numeracy,
-                communication and essential life skills.
-            </p>
-        </div>
+        <form id="trackingForm" class="tracking-form">
 
-        <div class="program">
-            <i class="fas fa-user-graduate"></i>
-            <h3>Junior Learning</h3>
-            <p>
-                Encouraging independent thinking, creativity,
-                practical learning and personal development.
-            </p>
-        </div>
+            <input
+                type="text"
+                id="trackingNumber"
+                placeholder="Enter order number e.g. BB123456"
+                required
+            >
 
-        <div class="program">
-            <i class="fas fa-flask"></i>
-            <h3>Science and Technology</h3>
-            <p>
-                Developing scientific curiosity, digital awareness
-                and problem-solving abilities.
-            </p>
-        </div>
+            <button type="submit" class="btn btn-primary">
+                Track Order
+            </button>
 
-        <div class="program">
-            <i class="fas fa-palette"></i>
-            <h3>Creative Arts</h3>
-            <p>
-                Developing imagination and artistic expression
-                through creative learning experiences.
-            </p>
-        </div>
+        </form>
 
-        <div class="program">
-            <i class="fas fa-running"></i>
-            <h3>Physical Education</h3>
-            <p>
-                Promoting fitness, teamwork, healthy lifestyles
-                and sporting participation.
-            </p>
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= FACILITIES ================= -->
-
-<section class="facilities" id="facilities">
-
-    <div class="section-heading">
-
-        <span class="section-tag">OUR ENVIRONMENT</span>
-
-        <h2>Our Learning Facilities</h2>
-
-        <p>
-            A supportive school environment helps learners
-            explore, discover and grow.
-        </p>
-
-    </div>
-
-    <div class="facilities-grid">
-
-        <div class="facility-card">
-            <img src="images/classrooms.jpg" alt="School classroom">
-            <div class="facility-info">
-                <h3>Modern Classrooms</h3>
-                <p>
-                    Learning spaces designed to support concentration,
-                    participation and collaboration.
-                </p>
-            </div>
-        </div>
-
-        <div class="facility-card">
-            <img src="images/library.jpg" alt="School library">
-            <div class="facility-info">
-                <h3>Library and Reading</h3>
-                <p>
-                    Encouraging reading habits, research
-                    and independent learning.
-                </p>
-            </div>
-        </div>
-
-        <div class="facility-card">
-            <img src="images/computer-lab.jpg" alt="Computer laboratory">
-            <div class="facility-info">
-                <h3>ICT and Technology</h3>
-                <p>
-                    Developing digital literacy and
-                    technological awareness.
-                </p>
-            </div>
-        </div>
-
-        <div class="facility-card">
-            <img src="images/science-lab.jpg" alt="Science laboratory">
-            <div class="facility-info">
-                <h3>Science Learning</h3>
-                <p>
-                    Supporting practical exploration,
-                    experimentation and scientific thinking.
-                </p>
-            </div>
-        </div>
-
-        <div class="facility-card">
-            <img src="images/sports.jpg" alt="School sports">
-            <div class="facility-info">
-                <h3>Sports and Recreation</h3>
-                <p>
-                    Promoting physical fitness, teamwork
-                    and healthy competition.
-                </p>
-            </div>
-        </div>
-
-        <div class="facility-card">
-            <img src="images/playground.jpg" alt="School playground">
-            <div class="facility-info">
-                <h3>Outdoor Activities</h3>
-                <p>
-                    Providing opportunities for recreation,
-                    discovery and social interaction.
-                </p>
-            </div>
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<
-<!-- ================= STUDENT LIFE ================= -->
-
-<section class="student-life" id="student-life">
-
-    <div class="section-heading">
-        <span class="section-tag">LIFE AT ST. PETROC</span>
-        <h2>More Than Just Academics</h2>
-        <p>
-            We believe every learner deserves opportunities
-            to explore talents, build friendships and develop confidence.
-        </p>
-    </div>
-
-    <!-- THREE STUDENT LIFE PHOTOS -->
-
-    <div class="student-life-grid">
-
-        <div class="life-card">
-            <img src="https://images.pexels.com/photos/36781049/pexels-photo-36781049.png"
-                 alt="Students participating in sports">
-
-            <div class="life-card-content">
-                <i class="fas fa-futbol"></i>
-                <h3>Sports and Athletics</h3>
-                <p>
-                    Promoting physical fitness, teamwork,
-                    discipline and sportsmanship.
-                </p>
-            </div>
-        </div>
-
-        <div class="life-card">
-            <img src="https://images.pexels.com/photos/17873057/pexels-photo-17873057.jpeg"
-                 alt="Students participating in music">
-
-            <div class="life-card-content">
-                <i class="fas fa-music"></i>
-                <h3>Music and Performing Arts</h3>
-                <p>
-                    Giving learners opportunities to express
-                    themselves through music, dance and drama.
-                </p>
-            </div>
-        </div>
-
-        <div class="life-card">
-            <img src="https://images.pexels.com/photos/9223074/pexels-photo-9223074.jpeg"
-                 alt="Students taking part in school activities">
-
-            <div class="life-card-content">
-                <i class="fas fa-users"></i>
-                <h3>Clubs and Activities</h3>
-                <p>
-                    Developing creativity, leadership,
-                    friendships and teamwork.
-                </p>
-            </div>
-        </div>
-
-    </div>
-
-</section>
-
-            </p>
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= ACHIEVEMENTS ================= -->
-
-<section class="achievements" id="achievements">
-
-    <div class="section-heading">
-
-        <span class="section-tag">OUR PROGRESS</span>
-
-        <h2>Celebrating Excellence</h2>
-
-        <p>
-            We value every achievement and celebrate
-            the growth and progress of our learners.
-        </p>
-
-    </div>
-
-    <div class="achievement-grid">
-
-        <div class="achievement-card">
-            <i class="fas fa-award"></i>
-            <h3>Academic Growth</h3>
-            <p>
-                Recognising dedication, effort and improvement
-                in academic performance.
-            </p>
-        </div>
-
-        <div class="achievement-card">
-            <i class="fas fa-trophy"></i>
-            <h3>Sports Excellence</h3>
-            <p>
-                Celebrating teamwork, participation
-                and sporting achievements.
-            </p>
-        </div>
-
-        <div class="achievement-card">
-            <i class="fas fa-star"></i>
-            <h3>Student Leadership</h3>
-            <p>
-                Recognising learners who demonstrate responsibility,
-                initiative and positive leadership.
-            </p>
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= RESEARCH ================= -->
-
-<section class="research" id="research">
-
-    <div class="section-heading">
-
-        <span class="section-tag">DISCOVERY AND INNOVATION</span>
-
-        <h2>Research and Innovation</h2>
-
-        <p>
-            We encourage curiosity, exploration and creative thinking
-            as important parts of the learning experience.
-        </p>
-
-    </div>
-
-    <div class="about-grid">
-
-        <div class="research-card">
-            <i class="fas fa-microscope"></i>
-            <h3>Scientific Exploration</h3>
-            <p>
-                Encouraging learners to ask questions,
-                investigate ideas and understand the world around them.
-            </p>
-        </div>
-
-        <div class="research-card">
-            <i class="fas fa-laptop-code"></i>
-            <h3>Digital Innovation</h3>
-            <p>
-                Exploring technology and developing
-                digital skills for the future.
-            </p>
-        </div>
-
-        <div class="research-card">
-            <i class="fas fa-brain"></i>
-            <h3>Critical Thinking</h3>
-            <p>
-                Promoting analysis, problem-solving
-                and independent thought.
-            </p>
-        </div>
-
-    </div>
-
-</section>
-
-
-<
-<!-- ================= NEWS AND UPDATES ================= -->
-
-<section class="news" id="news">
-
-    <div class="section-heading">
-
-        <span class="section-tag">STAY INFORMED</span>
-
-        <h2>Latest News and Updates</h2>
-
-        <p>
-            Stay connected with the latest happenings, school activities,
-            announcements and upcoming events at St. Petroc Premier Schools.
-        </p>
-
-    </div>
-
-    <div class="news-container">
-
-        <!-- NEWS CARD 1 -->
-
-        <div class="news-card">
-
-            <div class="news-image">
-                <img src="https://images.pexels.com/photos/13222085/pexels-photo-13222085.jpeg"
-                     alt="Students participating in academic activities">
-
-                <span class="news-category">ACADEMICS</span>
-            </div>
-
-            <div class="news-content">
-
-                <div class="news-date">
-                    <i class="fas fa-calendar-alt"></i>
-                    <span>School Announcement</span>
-                </div>
-
-                <h3>Academic Excellence and Learning</h3>
-
-                <p>
-                    Discover updates about classroom activities,
-                    academic programmes and the learning experiences
-                    that support our students' development.
-                </p>
-
-                <a href="#contact" class="read-more">
-                    Read More <i class="fas fa-arrow-right"></i>
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- NEWS CARD 2 -->
-
-        <div class="news-card">
-
-            <div class="news-image">
-                <img src="https://images.pexels.com/photos/16851076/pexels-photo-16851076.jpeg"
-                     alt="Students participating in school sports">
-
-                <span class="news-category">SPORTS & EVENTS</span>
-            </div>
-
-            <div class="news-content">
-
-                <div class="news-date">
-                    <i class="fas fa-calendar-alt"></i>
-                    <span>School Activities</span>
-                </div>
-
-                <h3>Sports, Talent and Creativity</h3>
-
-                <p>
-                    Explore our student activities, sporting events,
-                    creative performances and opportunities for
-                    learners to showcase their talents.
-                </p>
-
-                <a href="#student-life" class="read-more">
-                    Read More <i class="fas fa-arrow-right"></i>
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- NEWS CARD 3 -->
-
-        <div class="news-card">
-
-            <div class="news-image">
-                <img src="https://images.pexels.com/photos/10638209/pexels-photo-10638209.jpeg"
-                     alt="School community and announcements">
-
-                <span class="news-category">ANNOUNCEMENTS</span>
-            </div>
-
-            <div class="news-content">
-
-                <div class="news-date">
-                    <i class="fas fa-calendar-alt"></i>
-                    <span>Important Updates</span>
-                </div>
-
-                <h3>School News and Announcements</h3>
-
-                <p>
-                    Keep up with important notices, admission information,
-                    school programmes and updates for parents and learners.
-                </p>
-
-                <a href="#contact" class="read-more">
-                    Read More <i class="fas fa-arrow-right"></i>
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-            </div>
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= TESTIMONIALS ================= -->
-
-<section class="testimonials" id="testimonials">
-
-    <div class="section-heading">
-
-        <span class="section-tag">WHAT PEOPLE SAY</span>
-
-        <h2>Parent and Student Experiences</h2>
-
-        <p>
-            Every learner's journey matters. We value the experiences
-            and feedback of our school community.
-        </p>
-
-    </div>
-
-    <div class="testimonial-grid">
-
-        <div class="testimonial-card">
-            <i class="fas fa-quote-left"></i>
-            <p>
-                "Add a genuine parent testimonial about
-                the school's learning environment and communication."
-            </p>
-            <h4>Parent / Guardian</h4>
-            <span>Parent Community</span>
-        </div>
-
-        <div class="testimonial-card">
-            <i class="fas fa-quote-left"></i>
-            <p>
-                "Add a genuine student testimonial about learning,
-                friendships and school activities."
-            </p>
-            <h4>Student</h4>
-            <span>Student Community</span>
-        </div>
-
-        <div class="testimonial-card">
-            <i class="fas fa-quote-left"></i>
-            <p>
-                "Add a genuine testimonial about the school's
-                commitment to learner development."
-            </p>
-            <h4>Parent / Guardian</h4>
-            <span>Parent Community</span>
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= FAQ ================= -->
-
-<section class="faq" id="faq">
-
-    <div class="section-heading">
-
-        <span class="section-tag">NEED MORE INFORMATION?</span>
-
-        <h2>Frequently Asked Questions</h2>
-
-        <p>Find answers to some common questions about our school.</p>
-
-    </div>
-
-    <div class="faq-container">
-
-        <details class="faq-item">
-            <summary>How can I apply for admission?</summary>
-            <p>
-                Parents and guardians can contact the school
-                admissions office or submit an enquiry through
-                the website to receive application guidance.
-            </p>
-        </details>
-
-        <details class="faq-item">
-            <summary>What documents are required for admission?</summary>
-            <p>
-                Please contact the admissions office for the
-                current admission requirements and supporting documents.
-            </p>
-        </details>
-
-        <details class="faq-item">
-            <summary>Does the school offer extracurricular activities?</summary>
-            <p>
-                The school promotes holistic development through
-                sports, creative activities, leadership and other
-                extracurricular opportunities.
-            </p>
-        </details>
-
-        <details class="faq-item">
-            <summary>How can parents communicate with the school?</summary>
-            <p>
-                Parents and guardians can contact the school
-                through the official telephone number or email address.
-            </p>
-        </details>
-
-        <details class="faq-item">
-            <summary>How can I get information about school fees?</summary>
-            <p>
-                Contact the school administration to request
-                the current fee structure and payment information.
-            </p>
-        </details>
-
-    </div>
-
-</section>
-
-
-<!-- ================= ADMISSIONS CALL TO ACTION ================= -->
-
-<section class="admissions-cta">
-
-    <div class="cta-content">
-
-        <span>YOUR CHILD'S FUTURE STARTS HERE</span>
-
-        <h2>Give Your Child the Opportunity to Excel</h2>
-
-        <p>
-            Join a learning community committed to academic growth,
-            character development and lifelong success.
-        </p>
-
-        <a href="#contact" class="btn">Enquire About Admission</a>
+        <div id="trackingResult"></div>
 
     </div>
 
@@ -1053,155 +227,52 @@
 
 
 <!-- ================= CONTACT ================= -->
+<section class="contact-section" id="contact">
 
-<section class="contact" id="contact">
+    <div class="container">
 
-    <div class="section-heading">
-
-        <span class="section-tag">GET IN TOUCH</span>
-
-        <h2>Contact St. Petroc Premier Schools</h2>
-
-        <p>
-            We would love to hear from you.
-            Contact our administration team for enquiries and assistance.
-        </p>
-
-    </div>
-
-    <div class="contact-container">
-
-        <!-- CONTACT INFORMATION -->
-
-        <div class="contact-info">
-
-            <h3>School Information</h3>
-
-            <p>
-                Get in touch with us using the contact details
-                provided below.
-            </p>
-
-            <div class="contact-item">
-                <i class="fas fa-map-marker-alt"></i>
-                <div>
-                    <h4>School Location</h4>
-                    <p>Insert the school's physical address here.</p>
-                </div>
-            </div>
-
-            <div class="contact-item">
-                <i class="fas fa-phone"></i>
-                <div>
-                    <h4>Phone Number</h4>
-                    <p>Insert official school telephone number.</p>
-                </div>
-            </div>
-
-            <div class="contact-item">
-                <i class="fas fa-envelope"></i>
-                <div>
-                    <h4>Email Address</h4>
-                    <p>Insert official school email address.</p>
-                </div>
-            </div>
-
-            <div class="contact-item">
-                <i class="fas fa-clock"></i>
-                <div>
-                    <h4>Office Hours</h4>
-                    <p>Insert official school office hours.</p>
-                </div>
-            </div>
-
-            <div class="social-links">
-
-                <a href="#" aria-label="Facebook">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-
-                <a href="#" aria-label="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-
-                <a href="#" aria-label="X">
-                    <i class="fab fa-x-twitter"></i>
-                </a>
-
-                <a href="#" aria-label="YouTube">
-                    <i class="fab fa-youtube"></i>
-                </a>
-
-            </div>
-
+        <div class="section-heading">
+            <span>GET IN TOUCH</span>
+            <h2>Contact BlueBite Kitchen</h2>
+            <p>We would love to hear from you.</p>
         </div>
 
+        <div class="contact-grid">
 
-        <!-- CONTACT FORM -->
+            <div class="contact-info">
 
-        <div class="contact-form">
-
-            <h3>Send Us an Enquiry</h3>
-
-            <form action="#" method="post">
-
-                <div class="form-group">
-                    <label for="name">Full Name</label>
-                    <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        placeholder="Enter your full name"
-                        required
-                    >
+                <div>
+                    <i class="fas fa-phone"></i>
+                    <h3>Call Us</h3>
+                    <p>+254 700 000 000</p>
                 </div>
 
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="Enter your email address"
-                        required
-                    >
+                <div>
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email Us</h3>
+                    <p>info@bluebitekitchen.com</p>
                 </div>
 
-                <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        placeholder="Enter your phone number"
-                    >
+                <div>
+                    <i class="fas fa-location-dot"></i>
+                    <h3>Visit Us</h3>
+                    <p>Kenya</p>
                 </div>
 
-                <div class="form-group">
-                    <label for="subject">Subject</label>
-                    <select id="subject" name="subject" required>
-                        <option value="">Select an enquiry type</option>
-                        <option value="admissions">Admissions</option>
-                        <option value="programmes">Academic Programmes</option>
-                        <option value="fees">School Fees</option>
-                        <option value="general">General Enquiry</option>
-                    </select>
-                </div>
+            </div>
 
-                <div class="form-group">
-                    <label for="message">Your Message</label>
-                    <textarea
-                        id="message"
-                        name="message"
-                        rows="5"
-                        placeholder="Write your message here..."
-                        required
-                    ></textarea>
-                </div>
+            <form id="contactForm" class="contact-form">
 
-                <button type="submit" class="btn">
+                <input type="text" name="name" placeholder="Your Name" required>
+
+                <input type="email" name="email" placeholder="Your Email" required>
+
+                <input type="text" name="subject" placeholder="Subject">
+
+                <textarea name="message" rows="5" placeholder="Write your message..." required></textarea>
+
+                <button type="submit" class="btn btn-primary">
                     Send Message
-                    <i class="fas fa-paper-plane"></i>
                 </button>
 
             </form>
@@ -1214,110 +285,749 @@
 
 
 <!-- ================= FOOTER ================= -->
-
 <footer class="footer">
 
-    <div class="footer-container">
+    <div class="container footer-content">
 
-        <div class="footer-about">
+        <div>
+            <a href="#home" class="logo">
+                <i class="fas fa-utensils"></i>
+                BlueBite <span>Kitchen</span>
+            </a>
 
-            <h2>ST. PETROC</h2>
-
-            <h4>PREMIER SCHOOLS</h4>
-
-            <p>
-                Inspiring excellence, nurturing talent and
-                building tomorrow's leaders through quality education.
-            </p>
-
+            <p>Fresh food, great taste, unforgettable experiences.</p>
         </div>
-
 
         <div class="footer-links">
-
-            <h3>Quick Links</h3>
-
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#admissions">Admissions</a></li>
-                <li><a href="#programmes">Programmes</a></li>
-                <li><a href="#facilities">Facilities</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-
+            <a href="#home">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#contact">Contact</a>
+            <a href="#track-order">Track Order</a>
         </div>
 
-
-        <div class="footer-links">
-
-            <h3>Explore</h3>
-
-            <ul>
-                <li><a href="#student-life">Student Life</a></li>
-                <li><a href="#achievements">Achievements</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#news">News and Events</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#faq">FAQs</a></li>
-            </ul>
-
-        </div>
-
-
-        <div class="footer-contact">
-
-            <h3>Contact Information</h3>
-
-            <p><i class="fas fa-map-marker-alt"></i> School Address</p>
-            <p><i class="fas fa-phone"></i> School Phone Number</p>
-            <p><i class="fas fa-envelope"></i> School Email Address</p>
-
+        <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
         </div>
 
     </div>
 
-
-    <div class="footer-bottom">
-
-        <p>
-            &copy; <span id="year"></span>
-            St. Petroc Premier Schools.
-            All Rights Reserved.
-        </p>
-
-        <p>Designed with Excellence BY GARETH KIMANZI,,, WANTAM.</p>
-
+    <div class="copyright">
+        <p>&copy; <span id="currentYear"></span> BlueBite Kitchen. All Rights Reserved.</p>
     </div>
 
 </footer>
 
 
-<!-- ================= JAVASCRIPT ================= -->
+<!-- ================= CART DRAWER ================= -->
+<div class="cart-overlay" id="cartDrawer">
+
+    <div class="cart-panel">
+
+        <div class="cart-header">
+            <h2><i class="fas fa-shopping-cart"></i> Your Cart</h2>
+
+            <button id="closeCart" class="close-cart" aria-label="Close cart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <div id="cartItems" class="cart-items">
+            <p>Your cart is currently empty.</p>
+        </div>
+
+        <div class="cart-footer">
+
+            <div class="cart-total">
+                <span>Subtotal:</span>
+                <strong id="cartSubtotal">KES 0</strong>
+            </div>
+
+            <button id="checkoutButton" class="btn btn-primary">
+                Proceed to Checkout
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= CHECKOUT MODAL ================= -->
+<div class="checkout-overlay" id="checkoutModal">
+
+    <div class="checkout-box">
+
+        <div class="checkout-header">
+            <h2>Complete Your Order</h2>
+
+            <button id="closeCheckout" class="close-checkout" aria-label="Close checkout">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <form id="checkoutForm">
+
+            <label for="customerName">Full Name</label>
+            <input type="text" id="customerName" name="customerName" required>
+
+            <label for="customerPhone">Phone Number</label>
+            <input type="tel" id="customerPhone" name="customerPhone" required>
+
+            <label for="fulfilment">Order Type</label>
+
+            <select id="fulfilment" name="fulfilment">
+                <option value="delivery">Home Delivery</option>
+                <option value="pickup">Restaurant Pickup</option>
+            </select>
+
+            <div id="deliveryAddressGroup">
+                <label for="deliveryAddress">Delivery Address</label>
+                <textarea id="deliveryAddress" name="deliveryAddress" rows="3"></textarea>
+            </div>
+
+            <div class="checkout-total">
+                <span>Total Amount:</span>
+                <strong id="checkoutTotal">KES 0</strong>
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+                Place Order
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<!-- ================= TOAST NOTIFICATION ================= -->
+<div id="toast" class="toast"></div>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+     All website functionality is integrated below.
+===================================================== -->
 
 <script>
 
-    // Automatically update copyright year
-    document.getElementById("year").textContent =
-        new Date().getFullYear();
+document.addEventListener("DOMContentLoaded", function () {
 
-    // Mobile navigation toggle
-    const menuButton = document.querySelector(".menu-toggle");
-    const navbar = document.querySelector(".navbar");
+    // ================= FOOD DATABASE =================
 
-    if (menuButton && navbar) {
-        menuButton.addEventListener("click", function () {
-            navbar.classList.toggle("active");
-            menuButton.classList.toggle("active");
-        });
+    const foods = [
 
-        document.querySelectorAll(".navbar a").forEach(link => {
-            link.addEventListener("click", function () {
-                navbar.classList.remove("active");
-                menuButton.classList.remove("active");
-            });
-        });
+        // KENYAN DISHES
+        {id:1,name:"Nyama Choma",category:"main",price:850,description:"Authentic Kenyan roasted meat.",image:"https://images.unsplash.com/photo-1544025162-d76694265947?w=600"},
+        {id:2,name:"Ugali & Sukuma Wiki",category:"main",price:250,description:"Traditional Kenyan ugali served with fresh greens.",image:"https://images.unsplash.com/photo-1547592180-85f173990554?w=600"},
+        {id:3,name:"Beef Stew & Ugali",category:"main",price:500,description:"Tender beef stew served with soft ugali.",image:"https://images.unsplash.com/photo-1547592180-85f173990554?w=600"},
+        {id:4,name:"Githeri",category:"main",price:250,description:"Traditional Kenyan maize and beans.",image:"https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600"},
+        {id:5,name:"Beef Pilau",category:"main",price:450,description:"Kenyan spiced rice with tender beef.",image:"https://images.unsplash.com/photo-1512058564366-18510be2db19?w=600"},
+        {id:6,name:"Mukimo",category:"main",price:350,description:"Mashed potatoes, maize, peas and greens.",image:"https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600"},
+        {id:7,name:"Chapati & Beans",category:"main",price:300,description:"Soft chapati served with delicious beans.",image:"https://images.unsplash.com/photo-1547592180-85f173990554?w=600"},
+        {id:8,name:"Matoke",category:"main",price:350,description:"Delicious East African banana stew.",image:"https://images.unsplash.com/photo-1547592180-85f173990554?w=600"},
+        {id:9,name:"Beef Wet Fry",category:"main",price:650,description:"Kenyan-style beef wet fry with spices.",image:"https://images.unsplash.com/photo-1544025162-d76694265947?w=600"},
+        {id:10,name:"Chicken Pilau",category:"main",price:550,description:"Aromatic spiced rice served with chicken.",image:"https://images.unsplash.com/photo-1512058564366-18510be2db19?w=600"},
+
+        // INTERNATIONAL MEALS
+        {id:11,name:"Grilled Chicken",category:"main",price:750,description:"Juicy grilled chicken with seasoning.",image:"https://images.unsplash.com/photo-1532550907401-a500c9a57435?w=600"},
+        {id:12,name:"Chicken Biryani",category:"main",price:600,description:"Richly spiced rice with chicken.",image:"https://images.unsplash.com/photo-1563379091339-03246963d96c?w=600"},
+        {id:13,name:"Beef Steak",category:"main",price:950,description:"Tender grilled steak.",image:"https://images.unsplash.com/photo-1544025162-d76694265947?w=600"},
+        {id:14,name:"Chicken Alfredo Pasta",category:"main",price:650,description:"Creamy pasta with grilled chicken.",image:"https://images.unsplash.com/photo-1645112411341-6c4fd023714a?w=600"},
+        {id:15,name:"Fish Fillet",category:"main",price:700,description:"Crispy fish fillet served with sides.",image:"https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=600"},
+        {id:16,name:"Beef Lasagna",category:"main",price:750,description:"Layers of pasta, beef and cheese.",image:"https://images.unsplash.com/photo-1574894709920-11b28e7367e3?w=600"},
+
+        // BURGERS
+        {id:17,name:"Classic Beef Burger",category:"burgers",price:650,description:"Juicy beef burger with fresh vegetables.",image:"https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600"},
+        {id:18,name:"Chicken Burger",category:"burgers",price:600,description:"Crispy chicken burger.",image:"https://images.unsplash.com/photo-1606755962773-d324e0a13086?w=600"},
+        {id:19,name:"Cheese Burger",category:"burgers",price:700,description:"Beef burger topped with melted cheese.",image:"https://images.unsplash.com/photo-1550547660-d9450f859349?w=600"},
+
+        // PIZZA
+        {id:20,name:"Pepperoni Pizza",category:"pizza",price:1200,description:"Classic pizza topped with pepperoni.",image:"https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600"},
+        {id:21,name:"Chicken Pizza",category:"pizza",price:1100,description:"Chicken, cheese and fresh toppings.",image:"https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?w=600"},
+        {id:22,name:"Vegetable Pizza",category:"pizza",price:950,description:"Fresh vegetables and melted cheese.",image:"https://images.unsplash.com/photo-1579751626657-72bc17010498?w=600"},
+
+        // BREAKFAST AND SNACKS
+        {id:23,name:"Breakfast Combo",category:"main",price:400,description:"A filling breakfast to start your day.",image:"https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=600"},
+        {id:24,name:"Samosas",category:"main",price:150,description:"Crispy Kenyan-style samosas.",image:"https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600"},
+        {id:25,name:"French Fries",category:"main",price:250,description:"Golden crispy potato fries.",image:"https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=600"},
+        {id:26,name:"Smokie Pasua",category:"main",price:100,description:"Kenyan street-style smokie with kachumbari.",image:"https://images.unsplash.com/photo-1555126634-323283e090fa?w=600"},
+        {id:27,name:"Mandazi",category:"main",price:100,description:"Soft, freshly prepared Kenyan mandazi.",image:"https://images.unsplash.com/photo-1608198093002-ad4e005484df?w=600"},
+
+        // DRINKS
+        {id:28,name:"Mango Juice",category:"drinks",price:200,description:"Fresh mango juice.",image:"https://images.unsplash.com/photo-1546173159-315724a31696?w=600"},
+        {id:29,name:"Passion Juice",category:"drinks",price:200,description:"Refreshing passion fruit juice.",image:"https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=600"},
+        {id:30,name:"Kenyan Tea",category:"drinks",price:100,description:"Hot Kenyan tea with milk.",image:"https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=600"},
+        {id:31,name:"Lemonade",category:"drinks",price:180,description:"Fresh and refreshing lemonade.",image:"https://images.unsplash.com/photo-1513558161293-cdaf765edfd4?w=600"},
+        {id:32,name:"Chocolate Milkshake",category:"drinks",price:350,description:"Creamy chocolate milkshake.",image:"https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=600"}
+
+    ];
+
+
+    // ================= VARIABLES =================
+
+    const menuGrid = document.getElementById("menuGrid");
+    const menuSearch = document.getElementById("menuSearch");
+    const cartDrawer = document.getElementById("cartDrawer");
+    const cartItems = document.getElementById("cartItems");
+    const cartCount = document.getElementById("cartCount");
+    const cartSubtotal = document.getElementById("cartSubtotal");
+    const checkoutModal = document.getElementById("checkoutModal");
+    const checkoutForm = document.getElementById("checkoutForm");
+    const checkoutTotal = document.getElementById("checkoutTotal");
+    const toast = document.getElementById("toast");
+
+    let cart = JSON.parse(localStorage.getItem("bluebiteCart")) || [];
+    let activeCategory = "all";
+
+
+    // ================= CURRENCY =================
+
+    function formatMoney(amount) {
+        return "KES " + Number(amount).toLocaleString("en-KE");
     }
+
+
+    // ================= DISPLAY MENU =================
+
+    function displayMenu() {
+
+        const searchTerm = menuSearch.value.toLowerCase();
+
+        const filteredFoods = foods.filter(food => {
+
+            const matchesCategory =
+                activeCategory === "all" ||
+                food.category === activeCategory;
+
+            const matchesSearch =
+                food.name.toLowerCase().includes(searchTerm) ||
+                food.description.toLowerCase().includes(searchTerm);
+
+            return matchesCategory && matchesSearch;
+
+        });
+
+        if (filteredFoods.length === 0) {
+            menuGrid.innerHTML = "<p>No meals found. Try another search.</p>";
+            return;
+        }
+
+        menuGrid.innerHTML = filteredFoods.map(food => `
+
+            <div class="menu-card">
+
+                <div class="menu-card-image">
+                    <img src="${food.image}" alt="${food.name}" loading="lazy"
+                         onerror="this.onerror=null;this.src='https://placehold.co/600x400?text=BlueBite+Kitchen'">
+
+                    <span class="food-price">${formatMoney(food.price)}</span>
+                </div>
+
+                <div class="menu-card-content">
+
+                    <h3>${food.name}</h3>
+
+                    <p>${food.description}</p>
+
+                    <div class="menu-card-bottom">
+
+                        <span class="menu-price">${formatMoney(food.price)}</span>
+
+                        <button class="add-to-cart" data-id="${food.id}">
+                            <i class="fas fa-plus"></i> Add
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        `).join("");
+
+    }
+
+
+    // ================= CATEGORY FILTER =================
+
+    document.querySelectorAll("[data-category]").forEach(button => {
+
+        button.addEventListener("click", function () {
+
+            document.querySelectorAll("[data-category]").forEach(btn => {
+                btn.classList.remove("active");
+            });
+
+            this.classList.add("active");
+
+            activeCategory = this.dataset.category;
+
+            displayMenu();
+
+        });
+
+    });
+
+
+    // ================= SEARCH =================
+
+    menuSearch.addEventListener("input", displayMenu);
+
+
+    // ================= TOAST =================
+
+    let toastTimer;
+
+    function showToast(message) {
+
+        toast.textContent = message;
+        toast.classList.add("show");
+
+        clearTimeout(toastTimer);
+
+        toastTimer = setTimeout(() => {
+            toast.classList.remove("show");
+        }, 3000);
+
+    }
+
+
+    // ================= ADD TO CART =================
+
+    menuGrid.addEventListener("click", function (event) {
+
+        const button = event.target.closest(".add-to-cart");
+
+        if (!button) return;
+
+        const foodId = Number(button.dataset.id);
+        const food = foods.find(item => item.id === foodId);
+
+        if (!food) return;
+
+        const existingItem = cart.find(item => item.id === foodId);
+
+        if (existingItem) {
+            existingItem.quantity++;
+        } else {
+            cart.push({
+                ...food,
+                quantity: 1
+            });
+        }
+
+        saveCart();
+
+        showToast(food.name + " added to cart!");
+
+    });
+
+
+    // ================= SAVE CART =================
+
+    function saveCart() {
+
+        localStorage.setItem("bluebiteCart", JSON.stringify(cart));
+
+        updateCart();
+
+    }
+
+
+    // ================= UPDATE CART =================
+
+    function updateCart() {
+
+        let total = 0;
+        let count = 0;
+
+        cart.forEach(item => {
+
+            total += item.price * item.quantity;
+            count += item.quantity;
+
+        });
+
+        cartCount.textContent = count;
+        cartSubtotal.textContent = formatMoney(total);
+        checkoutTotal.textContent = formatMoney(total);
+
+        if (cart.length === 0) {
+
+            cartItems.innerHTML = `
+                <p class="empty-cart">
+                    Your cart is currently empty.
+                </p>
+            `;
+
+            return;
+
+        }
+
+        cartItems.innerHTML = cart.map(item => `
+
+            <div class="cart-item">
+
+                <img src="${item.image}" alt="${item.name}"
+                     onerror="this.onerror=null;this.src='https://placehold.co/100x100?text=Food'">
+
+                <div class="cart-item-details">
+
+                    <h4>${item.name}</h4>
+
+                    <p>${formatMoney(item.price)}</p>
+
+                    <div class="quantity-controls">
+
+                        <button class="quantity-btn" data-id="${item.id}" data-action="decrease">-</button>
+
+                        <span>${item.quantity}</span>
+
+                        <button class="quantity-btn" data-id="${item.id}" data-action="increase">+</button>
+
+                    </div>
+
+                </div>
+
+                <button class="remove-item" data-id="${item.id}" aria-label="Remove ${item.name}">
+                    <i class="fas fa-trash"></i>
+                </button>
+
+            </div>
+
+        `).join("");
+
+    }
+
+
+    // ================= CART QUANTITY AND REMOVE =================
+
+    cartItems.addEventListener("click", function (event) {
+
+        const button = event.target.closest("button");
+
+        if (!button) return;
+
+        const id = Number(button.dataset.id);
+
+        const item = cart.find(product => product.id === id);
+
+        if (!item) return;
+
+        if (button.classList.contains("quantity-btn")) {
+
+            if (button.dataset.action === "increase") {
+                item.quantity++;
+            }
+
+            if (button.dataset.action === "decrease") {
+                item.quantity--;
+            }
+
+            if (item.quantity <= 0) {
+                cart = cart.filter(product => product.id !== id);
+            }
+
+        }
+
+        if (button.classList.contains("remove-item")) {
+
+            cart = cart.filter(product => product.id !== id);
+
+            showToast("Item removed from cart.");
+
+        }
+
+        saveCart();
+
+    });
+
+
+    // ================= OPEN AND CLOSE CART =================
+
+    function openCart() {
+        cartDrawer.classList.add("active");
+        document.body.classList.add("modal-open");
+    }
+
+    function closeCart() {
+        cartDrawer.classList.remove("active");
+        document.body.classList.remove("modal-open");
+    }
+
+    document.getElementById("openCart").addEventListener("click", openCart);
+
+    document.getElementById("closeCart").addEventListener("click", closeCart);
+
+    cartDrawer.addEventListener("click", function (event) {
+        if (event.target === cartDrawer) closeCart();
+    });
+
+
+    // ================= CHECKOUT =================
+
+    document.getElementById("checkoutButton").addEventListener("click", function () {
+
+        if (cart.length === 0) {
+            showToast("Your cart is empty!");
+            return;
+        }
+
+        closeCart();
+
+        checkoutModal.classList.add("active");
+
+    });
+
+
+    document.getElementById("closeCheckout").addEventListener("click", function () {
+
+        checkoutModal.classList.remove("active");
+
+    });
+
+
+    checkoutModal.addEventListener("click", function (event) {
+
+        if (event.target === checkoutModal) {
+            checkoutModal.classList.remove("active");
+        }
+
+    });
+
+
+    // ================= DELIVERY OR PICKUP =================
+
+    const fulfilment = document.getElementById("fulfilment");
+    const deliveryAddressGroup = document.getElementById("deliveryAddressGroup");
+    const deliveryAddress = document.getElementById("deliveryAddress");
+
+    function updateFulfilment() {
+
+        const isDelivery = fulfilment.value === "delivery";
+
+        deliveryAddressGroup.style.display = isDelivery ? "block" : "none";
+
+        deliveryAddress.required = isDelivery;
+
+    }
+
+    fulfilment.addEventListener("change", updateFulfilment);
+
+    updateFulfilment();
+
+
+    // ================= PLACE ORDER =================
+
+    checkoutForm.addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        if (cart.length === 0) {
+            showToast("Your cart is empty!");
+            return;
+        }
+
+        const customerName = document.getElementById("customerName").value.trim();
+        const customerPhone = document.getElementById("customerPhone").value.trim();
+        const orderType = fulfilment.value;
+        const address = deliveryAddress.value.trim();
+
+        if (!customerName || !customerPhone) {
+            showToast("Please complete your details.");
+            return;
+        }
+
+        if (orderType === "delivery" && !address) {
+            showToast("Please enter your delivery address.");
+            return;
+        }
+
+        const total = cart.reduce((sum, item) => {
+            return sum + item.price * item.quantity;
+        }, 0);
+
+        const orderNumber = "BB" + Date.now().toString().slice(-8);
+
+        const order = {
+
+            orderNumber,
+            customerName,
+            customerPhone,
+            orderType,
+            address: orderType === "delivery" ? address : "Restaurant pickup",
+            items: [...cart],
+            total,
+            date: new Date().toLocaleString(),
+            status: "Order received"
+
+        };
+
+        const orders = JSON.parse(localStorage.getItem("bluebiteOrders")) || [];
+
+        orders.push(order);
+
+        localStorage.setItem("bluebiteOrders", JSON.stringify(orders));
+
+        cart = [];
+
+        saveCart();
+
+        checkoutForm.reset();
+
+        updateFulfilment();
+
+        checkoutModal.classList.remove("active");
+
+        showToast("Your order has been placed!");
+
+        alert(
+            "Thank you for ordering from BlueBite Kitchen!\n\n" +
+            "Your order number is: " + orderNumber +
+            "\nTotal: " + formatMoney(total) +
+            "\n\nPlease save your order number to track your order."
+        );
+
+    });
+
+
+    // ================= TRACK ORDER =================
+
+    document.getElementById("trackingForm").addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        const orderNumber = document.getElementById("trackingNumber").value.trim();
+
+        const orders = JSON.parse(localStorage.getItem("bluebiteOrders")) || [];
+
+        const order = orders.find(item =>
+            item.orderNumber.toLowerCase() === orderNumber.toLowerCase()
+        );
+
+        const result = document.getElementById("trackingResult");
+
+        if (!order) {
+
+            result.innerHTML = `
+                <div class="tracking-error">
+                    <i class="fas fa-circle-exclamation"></i>
+                    <p>Order not found. Please check your order number.</p>
+                </div>
+            `;
+
+            return;
+
+        }
+
+        const itemSummary = order.items.map(item =>
+            `${item.name} x ${item.quantity}`
+        ).join(", ");
+
+        result.innerHTML = `
+
+            <div class="tracking-success">
+
+                <h3><i class="fas fa-check-circle"></i> Order Found!</h3>
+
+                <p><strong>Order Number:</strong> ${order.orderNumber}</p>
+
+                <p><strong>Customer:</strong> ${order.customerName}</p>
+
+                <p><strong>Order Type:</strong> ${order.orderType}</p>
+
+                <p><strong>Items:</strong> ${itemSummary}</p>
+
+                <p><strong>Total:</strong> ${formatMoney(order.total)}</p>
+
+                <p><strong>Status:</strong> ${order.status}</p>
+
+                <p><strong>Date:</strong> ${order.date}</p>
+
+            </div>
+
+        `;
+
+    });
+
+
+    // ================= CONTACT FORM =================
+
+    document.getElementById("contactForm").addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        showToast("Thank you! Your message has been received in this demo.");
+
+        this.reset();
+
+    });
+
+
+    // ================= MOBILE NAVIGATION =================
+
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", function () {
+
+        navLinks.classList.toggle("active");
+
+        const icon = menuToggle.querySelector("i");
+
+        icon.classList.toggle("fa-bars");
+        icon.classList.toggle("fa-times");
+
+    });
+
+    navLinks.querySelectorAll("a").forEach(link => {
+
+        link.addEventListener("click", function () {
+
+            navLinks.classList.remove("active");
+
+            const icon = menuToggle.querySelector("i");
+
+            icon.classList.remove("fa-times");
+            icon.classList.add("fa-bars");
+
+        });
+
+    });
+
+
+    // ================= ESCAPE KEY =================
+
+    document.addEventListener("keydown", function (event) {
+
+        if (event.key === "Escape") {
+
+            closeCart();
+
+            checkoutModal.classList.remove("active");
+
+        }
+
+    });
+
+
+    // ================= FOOTER YEAR =================
+
+    document.getElementById("currentYear").textContent = new Date().getFullYear();
+
+
+    // ================= INITIALISE WEBSITE =================
+
+    displayMenu();
+
+    updateCart();
+
+});
 
 </script>
 
